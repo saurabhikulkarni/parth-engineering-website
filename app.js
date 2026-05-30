@@ -211,6 +211,182 @@ const DEFAULT_PRODUCTS = [
             "External Coating": "Anti-corrosion orange polyurethane coating",
             "Main Flanged Connections": "4x DN50 (2\") RF Flanges"
         }
+    },
+    {
+        id: "parth-copper-condenser",
+        name: "Copper Core Finned Radiator Bank",
+        category: "heat-transfer",
+        price: "Custom Quote",
+        badge: "High Temp",
+        image: "assets/20191002_135751.jpg.jpeg",
+        excerpt: "High-density copper tube finned radiator core stack designed for alternator and heavy HT motor cooling.",
+        description: "The Copper Core Finned Radiator Bank features dense seamless copper heating tubes mechanically expanded into corrugated aluminum fins to guarantee maximum thermal surface area contact. Designed for alternator housing, generators, and HT motor cooling systems.",
+        features: [
+            "Dense seamless copper core tubes prevent heat scaling",
+            "Automatic mechanical tube expansion secures 100% core contact",
+            "Rigid structural framing supports multi-row tube depths",
+            "Standard high-volume flanged intake and bleed ports"
+        ],
+        specifications: {
+            "Materials": "Copper core, Aluminum fins, Carbon Steel Frame",
+            "Design Temp": "Up to 150°C",
+            "Core Layout": "Multi-row staggered staggered tube grid",
+            "Factory Test": "1.5x hydrostatic pressure testing"
+        }
+    },
+    {
+        id: "parth-green-condenser",
+        name: "Sinnar Green Process Condenser",
+        category: "heat-transfer",
+        price: "Custom Quote",
+        badge: "Process Grade",
+        image: "assets/20221013_193105.jpg.jpeg",
+        excerpt: "Heavy-duty green process condenser stack custom fabricated for chemical, pharmaceutical, and distillery plants.",
+        description: "The Sinnar Green Process Condenser represents a specialized chemical processing build. Finished in high-resistance green industrial protective primer to shield against continuous ambient moisture and corrosive vapours.",
+        features: [
+            "Corrosion-resistant green chemical safety barrier primer",
+            "Heavy-wall carbon steel structural housing secures core bundle",
+            "Dual-bolted inspection doors allow direct cleaning and access",
+            "ASME Section VIII Div 1 weld compliance certified"
+        ],
+        specifications: {
+            "Coating": "Chemical-resistance green poly-epoxy primer",
+            "Weld Quality": "100% radiographically tested seams",
+            "Application": "Chemical refinery, distillery processes",
+            "Mounts": "Reinforced structural footings"
+        }
+    },
+    {
+        id: "parth-twin-exchangers",
+        name: "Twin Process Shell & Tube Exchangers",
+        category: "heat-transfer",
+        price: "Custom Quote",
+        badge: "Parallel Flow",
+        image: "assets/20230923_035410.jpg.jpeg",
+        excerpt: "Twin industrial shell and tube heat exchangers designed for parallel flow lubrication oil loops.",
+        description: "Specially designed to handle continuous processing bypass operations. The Twin Shell & Tube Exchangers operate in parallel, allowing plant operators to divert hot oil lines during maintenance without stopping turbine cycles.",
+        features: [
+            "Parallel double-barrel system supports continuous runtime",
+            "Seamless copper-nickel internal tube core bundles",
+            "Heavy circular locking flanges ensure zero-leak seals",
+            "Dual bleeding and fluid bypass nozzles pre-welded"
+        ],
+        specifications: {
+            "Design Type": "Parallel Double-Barrel Shell & Tube",
+            "Operating Pressure": "Shell 20 bar / Tube 16 bar",
+            "Standards": "ASME Section VIII Standards / TEMA Class C",
+            "Dry Weight": "320 kg (Combined)"
+        }
+    },
+    {
+        id: "parth-triple-crane",
+        name: "Triple-Stack Process Exchanger Bank",
+        category: "heat-transfer",
+        price: "Custom Quote",
+        badge: "Custom Build",
+        image: "assets/20230923_035439.jpg.jpeg",
+        excerpt: "Triple-stack linked process heat exchangers hanging on workshop crane prior to final hydrostatic testing.",
+        description: "Representing our advanced multi-pass thermal engineering capability, the Triple-Stack Process Exchanger Bank links three high-pressure shell and tube exchangers vertically in series to maximize temperature drop spans.",
+        features: [
+            "Triple-link shell assembly maximizes dwell heat transfers",
+            "ASME Section VIII Div 1 spot radiographed welding",
+            "Heavy carbon steel mounting saddles pre-welded to shells",
+            "Reinforced circular flanges prevent joint failures"
+        ],
+        specifications: {
+            "Materials": "ASTM A53 Boiler-Grade Carbon Steel Shells",
+            "Testing": "Factory hydro-tested at 24 bar (1.5x design pressure)",
+            "Connections": "High-pressure ANSI flanged nozzle ports",
+            "Weight": "480 kg"
+        }
+    },
+    {
+        id: "parth-red-double-box",
+        name: "ASME Red Double-Box Exchanger",
+        category: "heat-transfer",
+        price: "Custom Quote",
+        badge: "Heavy Fab",
+        image: "assets/20240329_183445.jpg.jpeg",
+        excerpt: "Heavy-duty red-painted industrial double-box exchanger for steel mill heating loops.",
+        description: "The Red Double-Box Heat Exchanger is specially fabricated for heavy-duty industrial steam loops in steel mills and paper processing plants. Features massive bolted header plates finished in high-heat industrial red primer.",
+        features: [
+            "Red circular structural backing flanges prevent gasket leaks",
+            "High-dwell copper tube bundles mechanical-collar expanded",
+            "Radiographed welding seams support extreme temperature cycles",
+            "Advanced chemical oxide primer protects against ambient moisture"
+        ],
+        specifications: {
+            "Shell Construction": "ASTM A36 Heavy Carbon Steel Plate Casing",
+            "Design Temperature": "Up to 220°C operating temperature",
+            "Weld Quality": "Spot radiographic weld inspection certified",
+            "Flange Standards": "Heavy ANSI pattern multi-bolt flanges"
+        }
+    },
+    {
+        id: "parth-three-coolers",
+        name: "Triple Finned Radiator Core Bank",
+        category: "heat-transfer",
+        price: "Custom Quote",
+        badge: "New Launch",
+        image: "assets/20240812_165507.jpg.jpeg",
+        excerpt: "Bank of three industrial grey-finished process finned coolers standing in final assembly.",
+        description: "The Triple Finned Radiator Bank is built to satisfy large-scale process plant cooling requirements. Stood upright in our Sinnar assembly bays, these units demonstrate our high-volume production capability.",
+        features: [
+            "Triple core layout supports parallel or serial installation",
+            "High-density aluminum corrugated fin grid mechanics",
+            "Thick galvanized carbon steel protective casing frame",
+            "Factory hydro-tested to ensure zero operational leaks"
+        ],
+        specifications: {
+            "Structure": "Carbon steel framing, seamless copper tubes",
+            "Max Pressure": "16 bar continuous operating envelope",
+            "Weld Class": "ISO 9001:2015 certified welding shop",
+            "Paint Finish": "Corrosion-resistant grey polyurethane coating"
+        }
+    },
+    {
+        id: "parth-grey-process-cooler",
+        name: "Finned Single-Pass Process Cooler",
+        category: "heat-transfer",
+        price: "Custom Quote",
+        badge: "Standard Build",
+        image: "assets/20240812_165513.jpg.jpeg",
+        excerpt: "Heavy-duty single-pass grey process cooler designed for clean liquid bypass loops.",
+        description: "A compact single-pass process radiator designed for easy modular integration into clean liquid-to-air cooling systems. Features a solid-shell design painted in our flagship grey protective enamel.",
+        features: [
+            "Single-pass core routing minimizes internal fluid drag",
+            "Staggered copper tube row grid maximizes air envelope contact",
+            "Pre-drilled side mounting tabs support immediate installation",
+            "Pneumatically tested at 1.5x working pressure"
+        ],
+        specifications: {
+            "Tubes Material": "Seamless high-purity copper core",
+            "Operating Pressure": "12 bar continuous rating",
+            "Fluid Connections": "DN50 flanged bypass connection ports",
+            "Casing Material": "14-gauge Hot-Dip Galvanized sheet metal casing"
+        }
+    },
+    {
+        id: "parth-rectangular-exchanger",
+        name: "ASME Rectangular Header Exchanger",
+        category: "heat-transfer",
+        price: "Custom Quote",
+        badge: "ASME Certified",
+        image: "assets/20251119_174212.jpg.jpeg",
+        excerpt: "ASME-certified rectangular header process exchanger with pre-installed flanged bypass piping.",
+        description: "The ASME Rectangular Header Exchanger is engineered for high-pressure gas extraction loops. Outfitted with pre-welded flanged bypass piping for quick connection into process lines.",
+        features: [
+            "Heavy-plate rectangular header absorbs high pressure shocks",
+            "Integrated pre-welded flanged bypass piping minimizes shop piping",
+            "Radia-tested seamless copper-nickel core heating tube bundle",
+            "Full structural grey protective coating defends against moisture"
+        ],
+        specifications: {
+            "Header Design": "ASME-certified heavy-plate box header",
+            "Flange Connections": "Dual DN40 flanged inlet/outlet bypass",
+            "Operating Pressure": "16 bar design (24 bar hydro tested)",
+            "Dry Weight": "210 kg"
+        }
     }
 ];
 
@@ -268,7 +444,7 @@ function loadCatalog() {
         try {
             STATE.products = JSON.parse(stored);
             
-            // Auto-migrate old mock assets to today's real high-resolution photographs
+            // Auto-migrate old mock assets or missing new defaults to today's real high-resolution photographs
             const hasOldAssets = STATE.products.some(p => 
                 p.image && (
                     p.image.includes('pressure_vessel.png') || 
@@ -282,8 +458,10 @@ function loadCatalog() {
                 )
             );
             
-            if (hasOldAssets) {
-                console.log("Old mock assets detected. Automatically migrating to today's real Sinnar workshop photos.");
+            const isMissingNewDefaults = !STATE.products.some(p => p.id === 'parth-three-coolers');
+            
+            if (hasOldAssets || isMissingNewDefaults) {
+                console.log("Old mock assets or missing default products detected. Automatically migrating to today's real Sinnar workshop photos.");
                 STATE.products = [...DEFAULT_PRODUCTS];
                 saveCatalog();
             }
@@ -303,7 +481,7 @@ function saveCatalog() {
 }
 
 function resetCatalogToDefault() {
-    if (confirm("Are you sure you want to reset the catalog database? This will clear all custom added items and restore the default 7 engineering products.")) {
+    if (confirm("Are you sure you want to reset the catalog database? This will clear all custom added items and restore the default 16 engineering products.")) {
         STATE.products = [...DEFAULT_PRODUCTS];
         saveCatalog();
         renderProducts();

@@ -10,7 +10,7 @@ const DEFAULT_PRODUCTS = [
         category: "heat-transfer",
         price: "Custom Quote",
         badge: "Flagship",
-        image: "assets/industrial_radiator.jpg",
+        image: "assets/20200828_145056.jpg.jpeg",
         excerpt: "Industrial liquid-to-air cooling heat exchanger, protective rust-resistant orange coating and dual flanged connections.",
         description: "The Parth Air-Cooled Finned Radiator (Orange) represents our flagship thermal design. Sized for rigorous high-temperature process cooling in steel mills, energy plants, and fabrication workshops. Manufactured with heavy carbon steel structural mounting plates and painted in a highly durable safety orange finish, this radiator utilizes high-integrity copper tubes mechanically bonded to aluminum fins. Staggered multi-row tube depths maximize heat-transfer coefficients.",
         features: [
@@ -36,7 +36,7 @@ const DEFAULT_PRODUCTS = [
         category: "heat-transfer",
         price: "Custom Quote",
         badge: "Heavy Duty",
-        image: "assets/radiator_mesh.jpg",
+        image: "assets/20220819_173459.jpg.jpeg",
         excerpt: "Heavy-duty process cooler featuring carbon steel casing, robust black protective front mesh, and dual top flanged ports.",
         description: "The Parth Grey Mesh Radiator is custom engineered for dusty, demanding plant environments. Enclosed within a heavy-gauge steel casing finished in structural grey enamel, it features a heavy-duty black carbon steel protective wire mesh screen on the front face to protect the delicate aluminum fins from particulate impact and physical debris. Twin top-mounted ports allow easy air bleeding and fluid circulation.",
         features: [
@@ -62,7 +62,7 @@ const DEFAULT_PRODUCTS = [
         category: "heat-transfer",
         price: "Custom Quote",
         badge: "New Design",
-        image: "assets/radiator_grey.jpg",
+        image: "assets/20190818_111132.jpg.jpeg",
         excerpt: "Air-cooled finned tube heat exchanger in a standard grey finish with multiple side flanged nozzles.",
         description: "Built for clean liquid-to-air cooling loops, this finned radiator provides high-capacity heat dissipation inside a compact structural frame. The grey corrosion-resistant coating integrates cleanly into standard grey-themed industrial assembly bays. Outfitted with multiple flanged nozzles along the inlet header to allow versatile liquid bypass configurations.",
         features: [
@@ -88,7 +88,7 @@ const DEFAULT_PRODUCTS = [
         category: "heat-transfer",
         price: "Custom Quote",
         badge: "Heavy Fab",
-        image: "assets/shell_exchanger_raw.jpg",
+        image: "assets/20240812_165457.jpg.jpeg",
         excerpt: "High-capacity fluid process heat exchanger with a polished metallic shell and reinforced red structural flanges.",
         description: "The Raw Metallic Shell & Tube Heat Exchanger represents the peak of our high-pressure welding and fabrication capabilities. Pictured in its raw metallic finish inside our GIDC workshop before paint coating, this exchanger features heavy-wall carbon steel shell casing and thick red-painted circular locking flanges. Precision-drilled internal tube sheets house high-dwell copper-nickel tube bundles.",
         features: [
@@ -114,7 +114,7 @@ const DEFAULT_PRODUCTS = [
         category: "heat-transfer",
         price: "Custom Quote",
         badge: "TEMA Class C",
-        image: "assets/oil_cooler_grey.jpg",
+        image: "assets/20240722_164024.jpg.jpeg",
         excerpt: "Multi-pass shell and tube heat exchanger optimized for lube oil cooling and machinery heat extraction loops.",
         description: "Optimized for machine tool lubrication oil cooling and hydraulic heat dissipation. The Parth Double-Pass Oil Cooler utilizes a long-barrel shell design that routes cooling liquid across a multi-pass internal baffle array, ensuring high heat-transfer coefficients while keeping pressure drops to a minimum. Finished in structural grey paint.",
         features: [
@@ -140,7 +140,7 @@ const DEFAULT_PRODUCTS = [
         category: "heat-transfer",
         price: "Custom Quote",
         badge: "Custom Fab",
-        image: "assets/oil_cooler_grey_portrait.jpg",
+        image: "assets/20191002_135919.jpg.jpeg",
         excerpt: "Industrial double-pass shell and tube heat exchanger featuring a massive pre-fabricated flanged U-bend bypass header.",
         description: "The Parth High-Capacity U-Tube Exchanger is custom-fabricated for high-dwell heat absorption and intensive thermal condensation loops. Featuring a long-barrel carbon steel shell casing finished in our structural grey enamel, it integrates a prominent pre-fabricated flanged U-bend bypass header on top. This specialized double-pass header geometry forces turbulent fluid paths, maximizing mechanical contact times and temperature drops while minimizing internal pressure bottlenecks.",
         features: [
@@ -166,7 +166,7 @@ const DEFAULT_PRODUCTS = [
         category: "air-movement",
         price: "Custom Quote",
         badge: "Heavy Duty",
-        image: "assets/centrifugal_blower.png",
+        image: "assets/IMG-20260408-WA0063.jpg.jpeg",
         excerpt: "High-volume centrifugal blower, featuring backward-curved steel impellers, safety-orange casing, and direct-coupled shafts.",
         description: "Engineered to deliver continuous air volumes against high static resistances. The Parth Centrifugal Blower Fan excels in industrial ventilation, dust extraction, and process combustion air supply. Outfitted with continuously welded scroll housing and dynamically balanced impellers to ensure G2.5 vibration-free running.",
         features: [
@@ -192,7 +192,7 @@ const DEFAULT_PRODUCTS = [
         category: "fabrication",
         price: "Custom Quote",
         badge: "ASME U-Stamp",
-        image: "assets/pressure_vessel.png",
+        image: "assets/20221013_192116.jpg.jpeg",
         excerpt: "Custom carbon steel pressure vessel cylinder, certified for compressed air storage, chemical mixing, or high-pressure gas receiver loops.",
         description: "The ASME Process Pressure Vessel represents the peak of our steel fabrication capabilities. Fabricated by our certified welding team, these tanks are designed for compressed air containment, nitrogen receivers, or process buffer tanks. Fully spot-radiographed to ensure absolute weld joint integrity, and lined inside with an advanced anti-corrosion epoxy barrier.",
         features: [

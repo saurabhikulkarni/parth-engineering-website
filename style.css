@@ -2335,6 +2335,9 @@ footer {
     justify-content: space-between;
     position: relative;
     overflow: hidden;
+}
+
+.brochure-print-page:not(:last-child) {
     page-break-after: always;
 }
 

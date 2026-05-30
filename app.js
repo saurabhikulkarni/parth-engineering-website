@@ -877,7 +877,7 @@ window.downloadBrochurePDF = function(event) {
                 logging: false
             },
             jsPDF: { unit: 'px', format: [1120, 792], orientation: 'landscape' },
-            pagebreak: { mode: 'before', before: '.brochure-print-page' }
+            pagebreak: { mode: 'css' }
         };
         
         html2pdf().set(opt).from(element).save().then(() => {

@@ -267,6 +267,26 @@ function loadCatalog() {
     if (stored) {
         try {
             STATE.products = JSON.parse(stored);
+            
+            // Auto-migrate old mock assets to today's real high-resolution photographs
+            const hasOldAssets = STATE.products.some(p => 
+                p.image && (
+                    p.image.includes('pressure_vessel.png') || 
+                    p.image.includes('centrifugal_blower.png') || 
+                    p.image.includes('industrial_radiator.jpg') ||
+                    p.image.includes('radiator_mesh.jpg') ||
+                    p.image.includes('radiator_grey.jpg') ||
+                    p.image.includes('shell_exchanger_raw.jpg') ||
+                    p.image.includes('oil_cooler_grey.jpg') ||
+                    p.image.includes('oil_cooler_grey_portrait.jpg')
+                )
+            );
+            
+            if (hasOldAssets) {
+                console.log("Old mock assets detected. Automatically migrating to today's real Sinnar workshop photos.");
+                STATE.products = [...DEFAULT_PRODUCTS];
+                saveCatalog();
+            }
         } catch (e) {
             console.error("Failed to parse stored catalog, resetting.", e);
             STATE.products = [...DEFAULT_PRODUCTS];

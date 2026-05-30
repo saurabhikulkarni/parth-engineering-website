@@ -836,3 +836,112 @@ function handleNewsletterSubmit(e) {
         }, 3000);
     }, 1000);
 }
+
+// ==========================================================================
+// Brochure PDF Generation & Dynamic Script Loading
+// ==========================================================================
+
+window.downloadBrochurePDF = function(event) {
+    if (event) event.preventDefault();
+    
+    const heroBtn = document.getElementById('hero-download-brochure');
+    const previewBtn = document.getElementById('btn-download-brochure');
+    
+    const setBtnState = (loading, text) => {
+        [heroBtn, previewBtn].forEach(btn => {
+            if (!btn) return;
+            btn.disabled = loading;
+            const textSpan = btn.querySelector('span');
+            if (textSpan) textSpan.textContent = text;
+        });
+    };
+    
+    const generatePDF = () => {
+        setBtnState(true, "Compiling PDF...");
+        
+        const element = document.getElementById('brochure-print-template');
+        if (!element) {
+            alert("Brochure print template not found!");
+            setBtnState(false, "Download Brochure");
+            return;
+        }
+        
+        const opt = {
+            margin: 0,
+            filename: 'Parth_Engineering_Brochure.pdf',
+            image: { type: 'jpeg', quality: 0.98 },
+            html2canvas: { 
+                scale: 2, 
+                useCORS: true, 
+                letterRendering: true,
+                logging: false
+            },
+            jsPDF: { unit: 'px', format: [1120, 792], orientation: 'landscape' }
+        };
+        
+        html2pdf().set(opt).from(element).save().then(() => {
+            setBtnState(false, "Download Brochure");
+            
+            const successAlert = document.createElement('div');
+            successAlert.style.position = 'fixed';
+            successAlert.style.bottom = '20px';
+            successAlert.style.right = '20px';
+            successAlert.style.background = '#059669';
+            successAlert.style.color = '#ffffff';
+            successAlert.style.padding = '12px 24px';
+            successAlert.style.borderRadius = '8px';
+            successAlert.style.boxShadow = '0 10px 25px rgba(0,0,0,0.3)';
+            successAlert.style.zIndex = '9999';
+            successAlert.style.fontFamily = "'Outfit', sans-serif";
+            successAlert.style.fontSize = '0.9rem';
+            successAlert.style.fontWeight = '600';
+            successAlert.style.display = 'flex';
+            successAlert.style.alignItems = 'center';
+            successAlert.style.gap = '8px';
+            successAlert.style.animation = 'slideIn 0.3s ease-out';
+            successAlert.innerHTML = `
+                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24">
+                    <polyline points="20 6 9 17 4 12"></polyline>
+                </svg>
+                <span>Brochure Downloaded!</span>
+            `;
+            
+            const style = document.createElement('style');
+            style.innerHTML = `
+                @keyframes slideIn {
+                    from { transform: translateY(100px); opacity: 0; }
+                    to { transform: translateY(0); opacity: 1; }
+                }
+            `;
+            document.head.appendChild(style);
+            
+            document.body.appendChild(successAlert);
+            setTimeout(() => {
+                successAlert.remove();
+                style.remove();
+            }, 4000);
+        }).catch(err => {
+            console.error("PDF generation failed:", err);
+            alert("Failed to generate PDF brochure. Please try again.");
+            setBtnState(false, "Download Brochure");
+        });
+    };
+    
+    if (typeof html2pdf === 'undefined') {
+        setBtnState(true, "Loading PDF Engine...");
+        
+        const script = document.createElement('script');
+        script.src = 'https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js';
+        script.crossOrigin = 'anonymous';
+        script.onload = () => {
+            generatePDF();
+        };
+        script.onerror = () => {
+            alert("Could not load the PDF engine. Check your connection.");
+            setBtnState(false, "Download Brochure");
+        };
+        document.head.appendChild(script);
+    } else {
+        generatePDF();
+    }
+};

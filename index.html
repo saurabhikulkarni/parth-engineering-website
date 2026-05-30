@@ -40,6 +40,7 @@
                 <a href="#hero">Home</a>
                 <a href="#catalog">Equipment</a>
                 <a href="#gallery">Gallery</a>
+                <a href="#brochure">Brochure</a>
                 <a href="#about">About Us</a>
             </nav>
             
@@ -93,9 +94,14 @@
                                     <polyline points="12 5 19 12 12 19"></polyline>
                                 </svg>
                             </a>
-                            <a href="#about" class="btn btn-secondary" id="btn-philosophy">
-                                <span>Our Workshop</span>
-                            </a>
+                            <button class="btn btn-secondary" onclick="downloadBrochurePDF(event)" id="hero-download-brochure">
+                                <span>Download Brochure</span>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" viewBox="0 0 24 24" style="margin-left: 6px;">
+                                    <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                                    <polyline points="7 10 12 15 17 10"></polyline>
+                                    <line x1="12" y1="15" x2="12" y2="3"></line>
+                                </svg>
+                            </button>
                         </div>
                     </div>
                     
@@ -229,6 +235,89 @@
                             <h4>Finned Core Assemblies</h4>
                             <span>Mechanical Expansion</span>
                         </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ==========================================================================
+             Interactive Brochure Section
+             ========================================================================== -->
+        <section id="brochure" class="brochure-section">
+            <div class="container">
+                <div class="section-header">
+                    <span class="badge">PRODUCT BROCHURE</span>
+                    <h2>Parth Official Product Brochure</h2>
+                    <p>Get a comprehensive overview of our heavy thermal engineering design wheel, shop floor fabrication capabilities, and complete 16-product specifications catalog in a print-ready A4 PDF.</p>
+                </div>
+                
+                <div class="brochure-preview-card glass">
+                    <div class="brochure-mockup-grid">
+                        <div class="brochure-mockup-page page-1 glass">
+                            <div class="mock-hdr">
+                                <span class="mock-logo">💠 Parth Engineering</span>
+                                <span class="mock-tag">Thermal Systems</span>
+                            </div>
+                            <div class="mock-body">
+                                <div class="mock-wheel-container">
+                                    <div class="mock-wheel">
+                                        <div class="wheel-sec transfer">Heat Transfer</div>
+                                        <div class="wheel-sec movement">Air Movement</div>
+                                        <div class="wheel-sec fabrication">Fabrication</div>
+                                        <div class="wheel-center">Parth</div>
+                                    </div>
+                                </div>
+                                <div class="mock-images">
+                                    <div class="mock-img-item" style="background-image: url('assets/IMG-20260408-WA0041.jpg.jpeg')"></div>
+                                    <div class="mock-img-item" style="background-image: url('assets/IMG-20260408-WA0069.jpg.jpeg')"></div>
+                                </div>
+                            </div>
+                            <div class="mock-ftr">Sinnar Yard GIDC | Nashik</div>
+                        </div>
+                        
+                        <div class="brochure-mockup-page page-2 glass">
+                            <div class="mock-hdr">
+                                <span class="mock-logo">💠 Parth Engineering</span>
+                                <span class="mock-tag">Product Portfolio</span>
+                            </div>
+                            <div class="mock-body">
+                                <div class="mock-catalog-grid">
+                                    <div class="mock-cat-item">
+                                        <div class="mock-cat-img" style="background-image: url('assets/20200828_145056.jpg.jpeg')"></div>
+                                        <span>Finned Radiator</span>
+                                    </div>
+                                    <div class="mock-cat-item">
+                                        <div class="mock-cat-img" style="background-image: url('assets/20240812_165457.jpg.jpeg')"></div>
+                                        <span>Shell & Tube Exchanger</span>
+                                    </div>
+                                    <div class="mock-cat-item">
+                                        <div class="mock-cat-img" style="background-image: url('assets/20221013_192116.jpg.jpeg')"></div>
+                                        <span>ASME Pressure Vessel</span>
+                                    </div>
+                                    <div class="mock-cat-item">
+                                        <div class="mock-cat-img" style="background-image: url('assets/IMG-20260408-WA0063.jpg.jpeg')"></div>
+                                        <span>Centrifugal Air Blower</span>
+                                    </div>
+                                </div>
+                                <div class="mock-standards">
+                                    <div class="mock-std-badge">🛡️ 1.5x Pressure Check</div>
+                                    <div class="mock-std-badge">🌀 ISO G2.5 Balanced</div>
+                                    <div class="mock-std-badge">⚙️ ASME Section VIII Code</div>
+                                </div>
+                            </div>
+                            <div class="mock-ftr">Quality Standards Guarantee</div>
+                        </div>
+                    </div>
+                    
+                    <div class="brochure-preview-actions">
+                        <button class="btn btn-primary" onclick="downloadBrochurePDF(event)" id="btn-download-brochure">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="btn-icon">
+                                <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                                <polyline points="7 10 12 15 17 10"></polyline>
+                                <line x1="12" y1="15" x2="12" y2="3"></line>
+                            </svg>
+                            <span>Download PDF Brochure</span>
+                        </button>
                     </div>
                 </div>
             </div>
@@ -500,7 +589,208 @@
         </div>
     </div>
 
+    <!-- ==========================================================================
+         Hidden A4 Landscape Brochure Print Template
+         ========================================================================== -->
+    <div style="display: none;">
+        <div id="brochure-print-template" class="brochure-print-container">
+            <!-- PAGE 1 -->
+            <div class="brochure-print-page bg-page-1">
+                <!-- Page Header -->
+                <div class="brochure-print-header">
+                    <div class="brochure-logo-area">
+                        <img src="assets/logo.png" alt="Parth Logo" class="brochure-logo">
+                        <div class="brochure-logo-text">
+                            <h1>PARTH ENGINEERING CO.</h1>
+                            <span>HIGH-PERFORMANCE THERMAL ENGINEERING</span>
+                        </div>
+                    </div>
+                    <div class="brochure-header-tag">ASME SECTION VIII DIVISION 1</div>
+                </div>
 
+                <!-- Page Body -->
+                <div class="brochure-print-body-grid-1">
+                    <!-- Left: Capabilities Narrative & Diagram -->
+                    <div class="brochure-body-col-left">
+                        <div class="brochure-main-heading">
+                            <h2>YOUR PREFERRED GLOBAL PARTNER FOR PROCESS EQUIPMENT</h2>
+                            <p>Specializing in custom design, raw materials fabrication, and quality inspections of heavy industrial heat exchangers, radiators, steam coils, dynamically balanced scroll blowers, and certified high-pressure process vessels.</p>
+                        </div>
+
+                        <!-- Wheel Cycle Graphic (SVG/CSS layout) -->
+                        <div class="brochure-capabilities-wheel">
+                            <div class="print-wheel-graphic">
+                                <div class="print-wheel-center">
+                                    <span>PARTH</span>
+                                    <small>SYSTEMS</small>
+                                </div>
+                                <div class="print-wheel-sector transfer">
+                                    <div class="sector-inner">
+                                        <h3>HEAT TRANSFER</h3>
+                                        <p>Shell & Tube Exchangers, Finned Radiators, Condensers, Coils, Oil Coolers</p>
+                                    </div>
+                                </div>
+                                <div class="print-wheel-sector movement">
+                                    <div class="sector-inner">
+                                        <h3>AIR MOVEMENT</h3>
+                                        <p>Centrifugal Blowers, Scroll Exhausters, Hot & Cold Air Hopper Fans</p>
+                                    </div>
+                                </div>
+                                <div class="print-wheel-sector fabrication">
+                                    <div class="sector-inner">
+                                        <h3>FABRICATION</h3>
+                                        <p>ASME Process Receivers, Heavy Steel Cylinder Rolling, Saddle Mounts</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Right: Shop Floor Photo Gallery Grid -->
+                    <div class="brochure-body-col-right">
+                        <div class="brochure-gallery-title">SINNAR GIDC WORKSHOP IN ACTION</div>
+                        <div class="brochure-gallery-grid-2x2">
+                            <div class="brochure-gal-card">
+                                <div class="brochure-gal-img" style="background-image: url('assets/IMG-20260408-WA0041.jpg.jpeg')"></div>
+                                <span>Finned Tube Assembly</span>
+                            </div>
+                            <div class="brochure-gal-card">
+                                <div class="brochure-gal-img" style="background-image: url('assets/IMG-20260408-WA0069.jpg.jpeg')"></div>
+                                <span>Core Tube Bundles</span>
+                            </div>
+                            <div class="brochure-gal-card">
+                                <div class="brochure-gal-img" style="background-image: url('assets/IMG-20260408-WA0063.jpg.jpeg')"></div>
+                                <span>Centrifugal Fan Run Bays</span>
+                            </div>
+                            <div class="brochure-gal-card">
+                                <div class="brochure-gal-img" style="background-image: url('assets/IMG-20260408-WA0022.jpg.jpeg')"></div>
+                                <span>Process Receiver Rolling</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Page Footer -->
+                <div class="brochure-print-footer">
+                    <div class="brochure-ftr-col">
+                        <strong>🏭 WORKS / WORKSHOP</strong>
+                        <span>Plot no. D73, MIDC, Malegaon, Tal.: Sinnar, Dist.: Nashik, Maharashtra - 422113</span>
+                    </div>
+                    <div class="brochure-ftr-col">
+                        <strong>📞 INQUIRY & CONTACTS</strong>
+                        <span>Mobile: +91 96239 14100 | Email: parth.engineerings@gmail.com</span>
+                    </div>
+                    <div class="brochure-ftr-col brochure-qr-col">
+                        <div class="brochure-qr-placeholder">
+                            <span class="qr-box">🔗</span>
+                        </div>
+                        <div class="brochure-qr-text">
+                            <strong>ONLINE CATALOGUE</strong>
+                            <span>www.parth-engineering.com</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- PAGE 2 -->
+            <div class="brochure-print-page bg-page-2">
+                <!-- Page Header -->
+                <div class="brochure-print-header">
+                    <div class="brochure-logo-area">
+                        <img src="assets/logo.png" alt="Parth Logo" class="brochure-logo">
+                        <div class="brochure-logo-text">
+                            <h1>PARTH ENGINEERING CO.</h1>
+                            <span>HEAVY INDUSTRIAL PRODUCT PORTFOLIO</span>
+                        </div>
+                    </div>
+                    <div class="brochure-header-tag">15+ YEARS OF WORKSHOP EXCELLENCE</div>
+                </div>
+
+                <!-- Page Body -->
+                <div class="brochure-print-body-grid-2">
+                    <div class="portfolio-grid-8">
+                        <div class="portfolio-item-card">
+                            <div class="portfolio-img" style="background-image: url('assets/20200828_145056.jpg.jpeg')"></div>
+                            <div class="portfolio-info">
+                                <h3>Finned Tube Radiator (Orange)</h3>
+                                <p>Seamless Copper Core & Mechanical Collars. Liquid-to-Air cooling loops.</p>
+                            </div>
+                        </div>
+                        <div class="portfolio-item-card">
+                            <div class="portfolio-img" style="background-image: url('assets/20240812_165457.jpg.jpeg')"></div>
+                            <div class="portfolio-info">
+                                <h3>ASME Shell & Tube Exchanger</h3>
+                                <p>ASTM A53 Boiler-Grade steel shell. High-pressure processing loops.</p>
+                            </div>
+                        </div>
+                        <div class="portfolio-item-card">
+                            <div class="portfolio-img" style="background-image: url('assets/20221013_192116.jpg.jpeg')"></div>
+                            <div class="portfolio-info">
+                                <h3>ASME Pressure Vessel Tank</h3>
+                                <p>Spot-radiographed welds (RT-3). Moisture-proof internal epoxy lining.</p>
+                            </div>
+                        </div>
+                        <div class="portfolio-item-card">
+                            <div class="portfolio-img" style="background-image: url('assets/IMG-20260408-WA0063.jpg.jpeg')"></div>
+                            <div class="portfolio-info">
+                                <h3>Centrifugal Air Blower Fan</h3>
+                                <p>Dynamically balanced backward scroll impellers (ISO G2.5). 15kW Drive.</p>
+                            </div>
+                        </div>
+                        <div class="portfolio-item-card">
+                            <div class="portfolio-img" style="background-image: url('assets/20221013_193105.jpg.jpeg')"></div>
+                            <div class="portfolio-info">
+                                <h3>Sinnar Green Process Condenser</h3>
+                                <p>epoxy green chemical protection barrier primer. Refinery condensing.</p>
+                            </div>
+                        </div>
+                        <div class="portfolio-item-card">
+                            <div class="portfolio-img" style="background-image: url('assets/20240722_164024.jpg.jpeg')"></div>
+                            <div class="portfolio-info">
+                                <h3>Double-Pass Lube Oil Cooler</h3>
+                                <p>Double-pass internal saddle-mounted barrel loop. Minimum pressure drop.</p>
+                            </div>
+                        </div>
+                        <div class="portfolio-item-card">
+                            <div class="portfolio-img" style="background-image: url('assets/20191002_135919.jpg.jpeg')"></div>
+                            <div class="portfolio-info">
+                                <h3>High-Capacity U-Tube Exchanger</h3>
+                                <p>High-dwell carbon shell with U-bend manifold loops for condensation.</p>
+                            </div>
+                        </div>
+                        <div class="portfolio-item-card">
+                            <div class="portfolio-img" style="background-image: url('assets/20230923_035439.jpg.jpeg')"></div>
+                            <div class="portfolio-info">
+                                <h3>Triple-Stack Process Exchangers</h3>
+                                <p>Three vertically series-linked shell & tube barrels for maximum thermal delta.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Page Footer -->
+                <div class="brochure-print-footer">
+                    <div class="brochure-ftr-markets">
+                        <strong>🛡️ CORE MARKETS & INDUSTRIES Served:</strong>
+                        <div class="market-pills-row">
+                            <span class="m-pill">Chemical & Distillery</span>
+                            <span class="m-pill">Oil & Gas Refineries</span>
+                            <span class="m-pill">Sugar Hopper Blowers</span>
+                            <span class="m-pill">Power Stations & HT Motors</span>
+                            <span class="m-pill">Paper & Steel Production</span>
+                        </div>
+                    </div>
+                    <div class="brochure-ftr-standards">
+                        <div class="std-row">
+                            <span class="std-item"><strong>1.5x</strong> Hydro Checked</span>
+                            <span class="std-item"><strong>ISO G2.5</strong> Dynamically Balanced</span>
+                            <span class="std-item"><strong>ASME VIII</strong> Compliant Welding</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 
     <!-- Core Logic Injection -->
     <script src="app.js"></script>

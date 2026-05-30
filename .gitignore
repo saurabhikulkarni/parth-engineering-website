@@ -1,0 +1,9 @@
+# Ignore temporary deployment packages
+parth-engineering-website.zip
+
+# Ignore local editor / OS configs
+.DS_Store
+Thumbs.db
+desktop.ini
+.vscode/
+.idea/

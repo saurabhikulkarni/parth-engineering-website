@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Parth Engineering | Private Catalog Dashboard</title>
+    
+    <!-- Theme & Stylesheet -->
+    <link rel="stylesheet" href="style.css">
+    
+    <style>
+        /* Admin Page Custom Specific Utilities */
+        .admin-dashboard-wrapper {
+            min-height: 100vh;
+            padding-top: 110px;
+            padding-bottom: 50px;
+            background: radial-gradient(circle at 10% 20%, rgba(var(--accent-secondary-rgb), 0.05) 0%, transparent 40%),
+                        radial-gradient(circle at 90% 80%, rgba(var(--accent-primary-rgb), 0.05) 0%, transparent 40%);
+        }
+        
+        .admin-container {
+            width: 100%;
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+        
+        .dashboard-grid {
+            display: grid;
+            grid-template-columns: 1.1fr 0.9fr;
+            gap: 2.5rem;
+            align-items: flex-start;
+        }
+        
+        .dashboard-panel {
+            padding: 2.5rem;
+            border-radius: 8px;
+        }
+        
+        .dashboard-panel h2 {
+            font-size: 1.8rem;
+            margin-bottom: 1.5rem;
+            color: var(--accent-primary);
+            border-bottom: 2px solid var(--border-color);
+            padding-bottom: 0.6rem;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        
+        .dashboard-panel h2 span {
+            font-size: 0.9rem;
+            color: var(--text-secondary);
+            font-weight: 500;
+        }
+        
+        .admin-nav-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            font-weight: 700;
+            color: var(--text-secondary);
+            text-transform: uppercase;
+            font-size: 0.85rem;
+            letter-spacing: 0.05em;
+            padding: 0.6rem 1.2rem;
+            border-radius: 6px;
+            border: 1px solid var(--border-color);
+            background: var(--surface);
+            transition: var(--transition-smooth);
+        }
+        
+        .admin-nav-link:hover {
+            color: var(--accent-primary);
+            border-color: var(--accent-primary);
+            background: var(--surface-hover);
+            transform: translateX(-3px);
+        }
+        
+        .admin-nav-link svg {
+            width: 16px;
+            height: 16px;
+            stroke: currentColor;
+            stroke-width: 2.5;
+            fill: none;
+            transition: var(--transition-smooth);
+        }
+        
+        .admin-form-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1.2rem;
+        }
+        
+        .admin-form-grid .full-width {
+            grid-column: span 2;
+        }
+        
+        /* Dashboard scrollable inventory list */
+        .dashboard-list {
+            display: flex;
+            flex-direction: column;
+            gap: 1.2rem;
+            max-height: 75vh;
+            overflow-y: auto;
+            padding-right: 0.5rem;
+        }
+        
+        /* Scrollbar styles for dashboard list */
+        .dashboard-list::-webkit-scrollbar {
+            width: 6px;
+        }
+        .dashboard-list::-webkit-scrollbar-track {
+            background: rgba(0,0,0,0.1);
+            border-radius: 3px;
+        }
+        .dashboard-list::-webkit-scrollbar-thumb {
+            background: var(--border-color);
+            border-radius: 3px;
+        }
+        .dashboard-list::-webkit-scrollbar-thumb:hover {
+            background: var(--accent-primary);
+        }
+        
+        .dashboard-item {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 1.2rem;
+            border-radius: 8px;
+            background: rgba(var(--accent-secondary-rgb), 0.04);
+            border: 1px solid var(--border-color);
+            transition: var(--transition-smooth);
+        }
+        
+        .dashboard-item:hover {
+            border-color: rgba(var(--accent-primary-rgb), 0.3);
+            background: rgba(var(--accent-secondary-rgb), 0.08);
+            transform: translateY(-2px);
+        }
+        
+        .dashboard-item-meta {
+            display: flex;
+            align-items: center;
+            gap: 1.2rem;
+        }
+        
+        .dashboard-item-meta img {
+            width: 65px;
+            height: 65px;
+            object-fit: cover;
+            border-radius: 6px;
+            border: 1px solid var(--border-color);
+            background: var(--bg-primary);
+        }
+        
+        .dashboard-item-title {
+            font-weight: 700;
+            font-size: 1.05rem;
+            margin-bottom: 0.2rem;
+            color: var(--text-primary);
+        }
+        
+        .dashboard-item-cat {
+            font-size: 0.75rem;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            color: var(--accent-primary);
+            font-weight: 700;
+        }
+        
+        .dashboard-footer-actions {
+            margin-top: 2rem;
+            border-top: 1px solid var(--border-color);
+            padding-top: 1.5rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        @media (max-width: 1024px) {
+            .dashboard-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+        
+        @media (max-width: 640px) {
+            .admin-form-grid {
+                grid-template-columns: 1fr;
+            }
+            .admin-form-grid .full-width, 
+            .admin-form-grid div {
+                grid-column: span 1;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header Navigation -->
+    <header id="main-header" class="scrolled">
+        <div class="container">
+            <a href="index.html" class="logo" id="header-logo" aria-label="Parth Engineering Home">
+                <img src="assets/logo.png" alt="Parth Engineering Logo">
+            </a>
+            
+            <div style="font-family: 'Outfit', sans-serif; font-size: 1.3rem; font-weight: 700; display: flex; align-items: center; gap: 0.6rem;">
+                <span style="color: var(--accent-primary);">⚙️</span> Catalog Dashboard
+            </div>
+            
+            <div class="nav-actions">
+                <a href="index.html" class="admin-nav-link">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                        <line x1="19" y1="12" x2="5" y2="12"></line>
+                        <polyline points="12 19 5 12 12 5"></polyline>
+                    </svg>
+                    <span>View Public Website</span>
+                </a>
+                
+                <button class="theme-toggle" id="theme-toggle" aria-label="Toggle Dark/Light Theme">
+                    <!-- Moon Icon -->
+                    <svg class="moon-icon" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                    </svg>
+                    <!-- Sun Icon -->
+                    <svg class="sun-icon" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="12" cy="12" r="5"></circle>
+                        <line x1="12" y1="1" x2="12" y2="3"></line>
+                        <line x1="12" y1="21" x2="12" y2="23"></line>
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                        <line x1="1" y1="12" x2="3" y2="12"></line>
+                        <line x1="21" y1="12" x2="23" y2="12"></line>
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                    </svg>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <main class="admin-dashboard-wrapper">
+        <div class="admin-container">
+            <div class="dashboard-grid">
+                
+                <!-- Left Section: Add Equipment Form Panel -->
+                <section class="dashboard-panel glass">
+                    <h2>Add New Equipment Card</h2>
+                    <form id="admin-form" class="contact-form admin-form-grid">
+                        <div class="form-group">
+                            <label for="prod-name" class="form-label">Equipment Model Name *</label>
+                            <input type="text" id="prod-name" class="form-input" placeholder="e.g. Copper Steam Coil" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="prod-category" class="form-label">Engineering Category *</label>
+                            <select id="prod-category" class="form-input" style="appearance: none; background-image: url('data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 24 24%22 fill=%22none%22 stroke=%22%236b7280%22 stroke-width=%222%22%3E%3Cpolyline points=%226 9 12 15 18 9%22%3E%3C/polyline%3E%3C/svg%3E'); background-repeat: no-repeat; background-position: right 1rem center; background-size: 1.1rem;" required>
+                                <option value="heat-transfer">Heat Transfer</option>
+                                <option value="air-movement">Air Movement</option>
+                                <option value="fabrication">Fabrication</option>
+                            </select>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="prod-price" class="form-label">Pricing / Quotation Tag</label>
+                            <input type="text" id="prod-price" class="form-input" placeholder="e.g. Custom Quote">
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="prod-badge" class="form-label">Special Tag / Badge</label>
+                            <input type="text" id="prod-badge" class="form-input" placeholder="e.g. New Launch, Popular">
+                        </div>
+                        
+                        <div class="form-group full-width">
+                            <label class="form-label">Product Image Setup *</label>
+                            <div style="display: flex; gap: 1.2rem; align-items: center; margin-top: 0.2rem;">
+                                <div id="prod-image-preview" style="width: 75px; height: 75px; border-radius: 6px; border: 1px solid var(--border-color); background: rgba(0,0,0,0.2); background-size: cover; background-position: center; display: flex; align-items: center; justify-content: center; flex-shrink: 0; color: var(--text-muted); font-size: 0.75rem; font-weight: 600;">
+                                    No Image
+                                </div>
+                                <div style="display: flex; flex-direction: column; gap: 0.5rem; flex-grow: 1;">
+                                    <input type="file" id="prod-image-file" class="form-input" accept="image/*" style="padding: 0.5rem; font-size: 0.85rem;" title="Upload directly from your device">
+                                    <input type="text" id="prod-image" class="form-input" placeholder="Or paste image path/URL here..." required>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="form-group full-width">
+                            <label for="prod-excerpt" class="form-label">Short Summary (1 sentence) *</label>
+                            <input type="text" id="prod-excerpt" class="form-input" placeholder="e.g. Double-pass shell heat exchanger designed for hydraulic oil loops." required>
+                        </div>
+                        
+                        <div class="form-group full-width">
+                            <label for="prod-desc" class="form-label">Detailed Engineering Description *</label>
+                            <textarea id="prod-desc" class="form-input" style="height: 100px;" placeholder="Describe technical builds, mechanical tolerances, and operating envelopes in detail..." required></textarea>
+                        </div>
+                        
+                        <div class="form-group full-width">
+                            <label for="prod-features" class="form-label">Key Features (1 feature per line) *</label>
+                            <textarea id="prod-features" class="form-input" style="height: 80px;" placeholder="Heavy carbon steel framing&#10;Factory hydro-tested at 1.5x working pressure&#10;Dual flanged connections..." required></textarea>
+                        </div>
+                        
+                        <div class="form-group full-width">
+                            <label for="prod-specs" class="form-label">Technical Specifications (Key: Value, 1 spec per line) *</label>
+                            <textarea id="prod-specs" class="form-input" style="height: 80px;" placeholder="Materials: Carbon Steel Shell, Copper Tubes&#10;Working Pressure: 16 bar (Tested at 24 bar)&#10;Design Standard: ASME Section VIII Div 1..." required></textarea>
+                        </div>
+                        
+                        <button type="submit" class="btn btn-primary full-width" style="margin-top: 1rem;">
+                            <span>Add Product to Catalog</span>
+                        </button>
+                    </form>
+                </section>
+                
+                <!-- Right Section: Active Products Grid Panel -->
+                <section class="dashboard-panel glass">
+                    <h2>Active Product Catalog <span id="product-count">0 Items</span></h2>
+                    
+                    <div class="dashboard-list" id="admin-catalog-list">
+                        <!-- Loaded dynamically from admin.js -->
+                    </div>
+                    
+                    <div class="dashboard-footer-actions">
+                        <button id="btn-admin-reset" class="btn btn-secondary" style="border-color: #ef4444; color: #ef4444; background: rgba(239, 68, 68, 0.05); font-weight: 700;">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5" style="margin-right: 0.2rem;">
+                                <path d="M21.5 2v6h-6M21.34 15.57a10 10 0 1 1-.57-8.38l5.67-5.67"></path>
+                            </svg>
+                            <span>Reset Catalog to Defaults</span>
+                        </button>
+                        
+                        <div style="font-size: 0.85rem; color: var(--text-muted); font-weight: 600;">
+                            Origin DB: `localStorage`
+                        </div>
+                    </div>
+                </section>
+                
+            </div>
+        </div>
+    </main>
+
+    <!-- Core Administrative Controller Sheet -->
+    <script src="admin.js"></script>
+</body>
+</html>

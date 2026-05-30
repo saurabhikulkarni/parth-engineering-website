@@ -2327,7 +2327,7 @@ footer {
 
 .brochure-print-page {
     width: 1120px;
-    height: 792px; /* Standard A4 landscape aspect ratio size */
+    height: 780px; /* Safe sub-pixel overflow buffer (A4 standard orientation is 792px) */
     padding: 40px;
     box-sizing: border-box;
     display: flex;
@@ -2335,10 +2335,6 @@ footer {
     justify-content: space-between;
     position: relative;
     overflow: hidden;
-}
-
-.brochure-print-page:not(:last-child) {
-    page-break-after: always;
 }
 
 .bg-page-1 {

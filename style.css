@@ -1764,6 +1764,11 @@ footer {
         grid-template-columns: 1fr;
     }
     
+    .product-grid {
+        grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+        gap: 2rem;
+    }
+    
     .categories {
         overflow-x: auto;
         padding-bottom: 0.5rem;
@@ -1823,6 +1828,24 @@ footer {
 @media (max-width: 640px) {
     .container {
         padding: 0 1.5rem;
+    }
+    
+    .product-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+    
+    .product-image-container {
+        height: 220px;
+    }
+    
+    .nav-actions {
+        gap: 1rem;
+    }
+    
+    .theme-toggle {
+        width: 40px;
+        height: 40px;
     }
     
     .hero h1 {

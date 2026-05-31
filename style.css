@@ -2129,48 +2129,76 @@ footer {
 
 /* 1. Brochure Preview Section */
 .brochure-section {
-    padding: 100px 0;
+    padding: 120px 0;
+    position: relative;
+    overflow: hidden;
+    background: radial-gradient(circle at 50% 50%, rgba(245, 158, 11, 0.03) 0%, transparent 60%), rgba(10, 15, 26, 0.4);
+}
+
+.brochure-preview-card {
+    padding: 4rem;
+    border-radius: 24px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 3.5rem;
+    background: linear-gradient(135deg, rgba(30, 41, 59, 0.3) 0%, rgba(15, 23, 42, 0.5) 100%);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    box-shadow: 0 30px 60px rgba(0, 0, 0, 0.4), inset 0 1px 0 rgba(255, 255, 255, 0.1);
     position: relative;
     overflow: hidden;
 }
 
-.brochure-preview-card {
-    padding: 3rem;
-    border-radius: 20px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 3rem;
-    background: rgba(30, 41, 59, 0.4);
-    box-shadow: 0 20px 40px rgba(0,0,0,0.3);
+.brochure-preview-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle at 50% -20%, rgba(245, 158, 11, 0.12) 0%, transparent 50%);
+    pointer-events: none;
 }
 
 /* Mockup Layout */
 .brochure-mockup-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(460px, 1fr));
-    gap: 2.5rem;
+    gap: 3rem;
     width: 100%;
+    z-index: 2;
 }
 
 .brochure-mockup-page {
-    border-radius: 12px;
-    padding: 24px;
+    border-radius: 16px;
+    padding: 28px;
     aspect-ratio: 1.414; /* A4 Landscape ratio */
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.35);
     border: 1px solid rgba(255, 255, 255, 0.08);
-    transition: transform 0.4s ease, border-color 0.4s ease;
+    background: linear-gradient(135deg, rgba(21, 30, 48, 0.8) 0%, rgba(11, 16, 27, 0.95) 100%);
+    transition: all 0.6s cubic-bezier(0.16, 1, 0.3, 1);
     overflow: hidden;
     position: relative;
-    background: linear-gradient(135deg, rgba(30, 41, 59, 0.6) 0%, rgba(15, 23, 42, 0.8) 100%);
+}
+
+.brochure-mockup-page::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.05) 0%, transparent 50%);
+    pointer-events: none;
 }
 
 .brochure-mockup-page:hover {
-    transform: translateY(-8px) scale(1.02);
-    border-color: rgba(245, 158, 11, 0.4); /* Gold hover effect */
+    transform: translateY(-12px) scale(1.03) rotate(0.5deg);
+    border-color: rgba(245, 158, 11, 0.45);
+    box-shadow: 0 25px 50px rgba(245, 158, 11, 0.15), 0 10px 20px rgba(0, 0, 0, 0.4);
 }
 
 /* Mock Header & Footer */
@@ -2179,26 +2207,32 @@ footer {
     justify-content: space-between;
     align-items: center;
     border-bottom: 1px solid rgba(255, 255, 255, 0.06);
-    padding-bottom: 10px;
-    margin-bottom: 10px;
+    padding-bottom: 12px;
+    margin-bottom: 12px;
 }
 .mock-logo {
-    font-size: 0.9rem;
-    font-weight: 700;
-    color: var(--text-primary);
+    font-size: 0.95rem;
+    font-weight: 800;
+    color: #ffffff;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    letter-spacing: 0.03em;
 }
 .mock-tag {
-    font-size: 0.75rem;
+    font-size: 0.72rem;
     color: var(--accent-primary);
-    font-weight: 600;
+    font-weight: 700;
     text-transform: uppercase;
+    letter-spacing: 0.08em;
 }
 .mock-ftr {
     border-top: 1px solid rgba(255, 255, 255, 0.06);
-    padding-top: 8px;
-    font-size: 0.7rem;
+    padding-top: 10px;
+    font-size: 0.72rem;
     color: var(--text-muted);
-    font-weight: 500;
+    font-weight: 600;
+    letter-spacing: 0.02em;
 }
 
 /* Page 1 Mock Details */
@@ -2218,75 +2252,136 @@ footer {
 }
 
 .mock-wheel {
-    width: 140px;
-    height: 140px;
+    width: 150px;
+    height: 150px;
     border-radius: 50%;
-    border: 2px dashed rgba(245, 158, 11, 0.3);
+    border: 2px dashed rgba(245, 158, 11, 0.25);
     position: relative;
     display: flex;
     align-items: center;
     justify-content: center;
-    background: rgba(15, 23, 42, 0.6);
+    background: rgba(15, 23, 42, 0.65);
+    box-shadow: 0 0 20px rgba(245, 158, 11, 0.03), inset 0 0 25px rgba(0, 0, 0, 0.6);
+    animation: wheelSlowRotate 35s linear infinite;
+}
+
+@keyframes wheelSlowRotate {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
 }
 
 .wheel-sec {
     position: absolute;
-    font-size: 0.65rem;
-    padding: 3px 8px;
+    font-size: 0.62rem;
+    padding: 4px 9px;
     border-radius: 20px;
-    background: rgba(30, 41, 59, 0.8);
+    background: rgba(15, 23, 42, 0.88);
     border: 1px solid rgba(255, 255, 255, 0.08);
-    color: var(--text-primary);
-    font-weight: 600;
+    color: #ffffff;
+    font-weight: 700;
+    white-space: nowrap;
+    box-shadow: 0 5px 12px rgba(0, 0, 0, 0.4);
+    animation: wheelCounterRotate 35s linear infinite;
 }
-.wheel-sec.transfer { top: 10px; border-color: rgba(59, 130, 246, 0.4); }
-.wheel-sec.movement { bottom: 15px; right: 5px; border-color: rgba(168, 85, 247, 0.4); }
-.wheel-sec.fabrication { bottom: 15px; left: 5px; border-color: rgba(249, 115, 22, 0.4); }
+
+@keyframes wheelCounterRotate {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(-360deg); }
+}
+
+.wheel-sec.transfer {
+    top: -12px;
+    left: 50%;
+    margin-left: -40px;
+    border-color: rgba(59, 130, 246, 0.5);
+    box-shadow: 0 0 8px rgba(59, 130, 246, 0.2);
+}
+.wheel-sec.movement {
+    bottom: 12px;
+    right: -12px;
+    border-color: rgba(168, 85, 247, 0.5);
+    box-shadow: 0 0 8px rgba(168, 85, 247, 0.2);
+}
+.wheel-sec.fabrication {
+    bottom: 12px;
+    left: -12px;
+    border-color: rgba(249, 115, 22, 0.5);
+    box-shadow: 0 0 8px rgba(249, 115, 22, 0.2);
+}
 
 .wheel-center {
     font-size: 0.8rem;
-    font-weight: 800;
+    font-weight: 900;
     color: var(--accent-primary);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    animation: wheelCounterRotate 35s linear infinite;
 }
 
 .mock-images {
     display: flex;
-    gap: 10px;
+    gap: 15px;
     justify-content: center;
+    margin-top: 10px;
 }
 
 .mock-img-item {
-    width: 80px;
-    height: 50px;
-    border-radius: 6px;
+    width: 90px;
+    height: 55px;
+    border-radius: 8px;
     background-size: cover;
     background-position: center;
-    border: 1px solid rgba(255, 255, 255, 0.08);
+    border: 2px solid rgba(255, 255, 255, 0.12);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+    transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.mock-img-item:first-child {
+    transform: rotate(-3deg);
+}
+
+.mock-img-item:last-child {
+    transform: rotate(3deg);
+}
+
+.brochure-mockup-page:hover .mock-img-item:first-child {
+    transform: rotate(-1deg) scale(1.05);
+}
+
+.brochure-mockup-page:hover .mock-img-item:last-child {
+    transform: rotate(1deg) scale(1.05);
 }
 
 /* Page 2 Mock Details */
 .mock-catalog-grid {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    gap: 8px;
+    gap: 10px;
 }
 .mock-cat-item {
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 4px;
+    gap: 6px;
 }
 .mock-cat-img {
     width: 100%;
-    aspect-ratio: 1.2;
-    border-radius: 4px;
+    aspect-ratio: 1.25;
+    border-radius: 6px;
     background-size: cover;
     background-position: center;
-    border: 1px solid rgba(255, 255, 255, 0.08);
+    border: 2px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.brochure-mockup-page:hover .mock-cat-img {
+    border-color: rgba(255, 255, 255, 0.2);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.4);
 }
 .mock-cat-item span {
-    font-size: 0.55rem;
+    font-size: 0.56rem;
     color: var(--text-secondary);
+    font-weight: 600;
     text-align: center;
     white-space: nowrap;
     overflow: hidden;
@@ -2296,22 +2391,79 @@ footer {
 
 .mock-standards {
     display: flex;
-    justify-content: space-around;
-    gap: 5px;
-    margin-top: 10px;
+    justify-content: space-between;
+    gap: 8px;
+    margin-top: 15px;
 }
 .mock-std-badge {
     font-size: 0.58rem;
-    color: var(--text-primary);
-    background: rgba(245, 158, 11, 0.1);
-    border: 1px solid rgba(245, 158, 11, 0.2);
-    padding: 3px 6px;
-    border-radius: 4px;
-    font-weight: 500;
+    color: #ffffff;
+    background: linear-gradient(135deg, rgba(245, 158, 11, 0.15) 0%, rgba(245, 158, 11, 0.05) 100%);
+    border: 1px solid rgba(245, 158, 11, 0.25);
+    padding: 4px 10px;
+    border-radius: 6px;
+    font-weight: 700;
+    box-shadow: 0 4px 8px rgba(245, 158, 11, 0.05);
+    display: flex;
+    align-items: center;
+    gap: 4px;
 }
 
 .brochure-preview-actions {
-    margin-top: 1rem;
+    margin-top: 1.5rem;
+}
+
+#btn-download-brochure {
+    padding: 1.1rem 3rem;
+    font-size: 1rem;
+    font-weight: 700;
+    border-radius: 50px;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    background: linear-gradient(135deg, #f59e0b 0%, #d97706 100%);
+    border: none;
+    color: #ffffff;
+    box-shadow: 0 10px 25px rgba(245, 158, 11, 0.3);
+    transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+}
+
+#btn-download-brochure::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 50%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.25), transparent);
+    transform: skewX(-20deg);
+}
+
+#btn-download-brochure:hover {
+    transform: translateY(-4px) scale(1.02);
+    box-shadow: 0 15px 35px rgba(245, 158, 11, 0.45);
+    background: linear-gradient(135deg, #fbbf24 0%, #ea580c 100%);
+}
+
+#btn-download-brochure:hover::after {
+    left: 150%;
+    transition: left 0.8s ease;
+}
+
+#btn-download-brochure svg {
+    width: 20px;
+    height: 20px;
+    stroke-width: 2.8;
+    transition: transform 0.3s ease;
+}
+
+#btn-download-brochure:hover svg {
+    transform: translateY(2px);
 }
 
 /* 2. PDF Download Assembly Container (Print Specific) */

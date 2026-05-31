@@ -2,188 +2,188 @@
    Parth Engineering Website Core Logic & Administrative Portal
    ========================================================================== */
 
-// 1. DEFAULT catalog (7 premium heavy industrial products, featuring 5 actual photos)
+// 1. DEFAULT catalog (16 premium heavy industrial products matching official brochure details)
 const DEFAULT_PRODUCTS = [
     {
         id: "parth-radiator-orange",
-        name: "Air-Cooled Finned Radiator (Orange)",
+        name: "CACW Heat Exchanger with Enclosure Shroud (Naval)",
         category: "heat-transfer",
         price: "Custom Quote",
-        badge: "Flagship",
+        badge: "CDA Approved",
         image: "assets/20200828_145056.jpg.jpeg",
-        excerpt: "Industrial liquid-to-air cooling heat exchanger, protective rust-resistant orange coating and dual flanged connections.",
-        description: "The Parth Air-Cooled Finned Radiator (Orange) represents our flagship thermal design. Sized for rigorous high-temperature process cooling in steel mills, energy plants, and fabrication workshops. Manufactured with heavy carbon steel structural mounting plates and painted in a highly durable safety orange finish, this radiator utilizes high-integrity copper tubes mechanically bonded to aluminum fins. Staggered multi-row tube depths maximize heat-transfer coefficients.",
+        excerpt: "High-efficiency marine CACW cooler suitable for 800 kW to 2000 kW alternator systems on Indian Navy ships.",
+        description: "Our CACW Heat Exchangers with enclosure shrouds are built to withstand rigorous naval conditions. Designed for 800 kW to 2000 kW alternators on Indian Navy ships under CDA guidelines. Heavy carbon steel enclosure sheets prevent vibration fatigue under continuous ship operations. Incorporates automatic mechanical tube expansions, high-dwelling copper-nickel cooling tubes, and sacrificial zinc anode plugs for total saltwater corrosion defense.",
         features: [
-            "Heavy carbon steel plates protect against high shop vibrations",
-            "Double-embossed fin mechanics ensure 100% metal-to-metal contact",
-            "Dual flanged DN80 connection ports support high circulation volumes",
-            "Anti-rust safety orange poly-enamel coating protects casing integrity",
-            "Continuously hydro-tested at 1.5x working pressure for leak protection",
-            "Accompanied by full ASME Section VIII thermal calculation datasheets"
+            "Suitable for 800 kW to 2000 kW marine alternators (CDA compliant)",
+            "Heavy Carbon Steel (IS 2062) shroud enclosure (5mm to 10mm thickness)",
+            "Integrated inspection doors, air inlet, and outlet duct openings",
+            "Mounting frame precision-fabricated to match alternator top profile",
+            "Torque expanded tube-to-tube sheet joints for robust leak protection",
+            "Includes zinc anode plug for absolute saltwater corrosion defense"
         ],
         specifications: {
-            "Tube Core Material": "Seamless Copper-Nickel (90/10 ratio)",
-            "Fin Grid Material": "High-density corrugated Aluminum",
-            "Working Pressure": "16 bar (Tested at 24 bar hydro)",
-            "Flange Standards": "ANSI B16.5 / DIN 2576 (DN80 / 3\")",
-            "Dimensions": "1200mm x 950mm x 450mm",
-            "Dry Weight": "180 kg"
+            "Enclosure / Shroud Material": "C.S. IS 2062 (5 mm to 10 mm thickness)",
+            "Tube Core Material": "Seamless Copper-Nickel (Cu-Ni 90:10 / 70:30)",
+            "Fin Grid Type": "Spiral grooved copper & wire wound type",
+            "Tube Sheet Metallurgy": "SS316L (16 mm thickness)",
+            "Headers & Nozzles": "SS316L with zinc anode plugs",
+            "Hydrostatic Test": "Tested at 10 Bar (1.5x design pressure)"
         }
     },
     {
         id: "parth-radiator-grey-mesh",
-        name: "Process Finned Radiator (Grey Mesh)",
+        name: "Double Tube Type Heat Exchanger (Naval)",
         category: "heat-transfer",
         price: "Custom Quote",
-        badge: "Heavy Duty",
+        badge: "Marine Grade",
         image: "assets/20220819_173459.jpg.jpeg",
-        excerpt: "Heavy-duty process cooler featuring carbon steel casing, robust black protective front mesh, and dual top flanged ports.",
-        description: "The Parth Grey Mesh Radiator is custom engineered for dusty, demanding plant environments. Enclosed within a heavy-gauge steel casing finished in structural grey enamel, it features a heavy-duty black carbon steel protective wire mesh screen on the front face to protect the delicate aluminum fins from particulate impact and physical debris. Twin top-mounted ports allow easy air bleeding and fluid circulation.",
+        excerpt: "Fail-safe double-tube heat exchanger for 250 kW to 2000 kW motors and alternators in marine environments.",
+        description: "The Parth Double Tube Type Heat Exchanger is engineered specifically for 250 kW to 2000 kW naval motor and alternator systems (CDA compliant). Incorporates concentric inner and outer tubes to prevent oil-water contamination in critical marine setups. Features bullet expansion throughout the tube layout and torque-expanded tube sheets to secure joints.",
         features: [
-            "Heavy-duty protective front wire mesh screen blocks debris impact",
-            "Thick carbon steel casing finished in industrial grey paint",
-            "Automatic fin collaring guarantees tight tube-to-fin mechanical bond",
-            "Statically stress-tested to operate under continuous high flow pressures",
-            "100% pneumatic leak tested at the factory before dispatch",
-            "Engineered to match standard heavy-duty processing dimensions"
+            "Double-wall tube barrier prevents internal fluid cross-contamination",
+            "Designed for 250 kW to 2000 kW motors & alternators (CDA)",
+            "Concentric inner copper-nickel tube and outer copper tube system",
+            "Mechanical bullet expansion throughout the entire tube length",
+            "Torque expanded tube to tube sheet joints for secure locking",
+            "Fully certified for third party inspection and material stamping"
         ],
         specifications: {
-            "Materials": "Carbon Steel Frame, Copper Core, Aluminum Fins",
-            "Protection": "Heavy-Duty steel mesh faceplate",
-            "Working Pressure": "12 bar (Pneumatic tested at 18 bar)",
-            "Connections": "2x Top-mounted flanged connection necks",
-            "Application": "Chemical processing, dust-prone factories",
-            "Casing Paint": "High-durability structural grey enamel"
+            "Inner Tube Material": "Seamless Copper-Nickel (Cu-Ni 90:10)",
+            "Outer Tube Material": "Seamless Copper",
+            "Fin Material": "High-dwell Copper fins",
+            "Tube Sheet Material": "SS316L (12 mm / 16 mm thickness)",
+            "Headers & Nozzles": "SS316L marine grade headers",
+            "Hydrostatic Test": "Tested at 10 Bar pressure"
         }
     },
     {
         id: "parth-radiator-grey",
-        name: "Finned Tube Process Cooler (Grey)",
+        name: "Air Cooler Radiator for Alternators & DG Sets",
         category: "heat-transfer",
         price: "Custom Quote",
-        badge: "New Design",
+        badge: "1.5 MW Max",
         image: "assets/20190818_111132.jpg.jpeg",
-        excerpt: "Air-cooled finned tube heat exchanger in a standard grey finish with multiple side flanged nozzles.",
-        description: "Built for clean liquid-to-air cooling loops, this finned radiator provides high-capacity heat dissipation inside a compact structural frame. The grey corrosion-resistant coating integrates cleanly into standard grey-themed industrial assembly bays. Outfitted with multiple flanged nozzles along the inlet header to allow versatile liquid bypass configurations.",
+        excerpt: "Heavy-duty industrial air cooler/radiator suitable for 1.5 MT to 1.5 MW alternators and DG sets.",
+        description: "Engineered for massive thermal dissipation in alternators, DG sets, and HT motors. Featuring openable type headers on both sides to allow direct tube cleaning, this radiator utilizes spiral crimped or wire wound copper and aluminum fins for maximum air contact efficiency.",
         features: [
-            "Multiple side-flanged nozzles support convenient liquid bypass",
-            "Vibration-isolated base brackets ensure stable workshop mounting",
-            "High-dwell staggered copper tubes maximize thermal exchange surface",
-            "Thick galvanized steel side panels support the core frame",
-            "Corrosion-resistant grey polyurethane coating shields the exterior",
-            "Designed in strict compliance with TEMA Class C guidelines"
+            "Manufacturing capacity range suitable for 1.5 MT to 1.5 MW setups",
+            "Openable headers on both sides for effortless mechanical tube cleaning",
+            "Spiral crimped copper & aluminum or wire wound copper fins",
+            "Staggered multi-row tube depths maximize heat-transfer coefficients",
+            "Thick hot-dip galvanized side frames protect the core stack",
+            "100% factory hydro-tested at 10 Bar working pressure"
         ],
         specifications: {
-            "Internal Tubes": "Seamless copper heating tubes",
-            "Fins Layout": "Dense Aluminum fins, mechanical collar expand",
-            "Design Temperature": "Up to 150°C",
-            "Hydrostatic Test": "Factory tested at 1.5x design pressure",
-            "Nozzle Connections": "DN50 flanged bypass layout",
-            "Casing Material": "14-gauge Hot-Dip Galvanized Casing"
+            "Tubes Metallurgy": "Copper, Cu-Ni (90:10 / 70:30), SS304 Seamless",
+            "Tube Diameter": "1/2\" OD to 3/4\" OD",
+            "Fin Grid Type": "Spiral crimped copper & aluminum, wire wound copper",
+            "Headers Material": "C.S. IS 2062, SS304, SS316 (openable type)",
+            "Tube Sheets": "Heavy carbon steel or stainless steel sheets",
+            "Hydrostatic Test": "Tested at 10 Bar pressure"
         }
     },
     {
         id: "parth-shell-tube-raw",
-        name: "High-Pressure Shell & Tube Exchanger",
+        name: "ASME Shell & Tube Heat Exchanger",
         category: "heat-transfer",
         price: "Custom Quote",
-        badge: "Heavy Fab",
+        badge: "Boiler Grade",
         image: "assets/20240812_165457.jpg.jpeg",
-        excerpt: "High-capacity fluid process heat exchanger with a polished metallic shell and reinforced red structural flanges.",
-        description: "The Raw Metallic Shell & Tube Heat Exchanger represents the peak of our high-pressure welding and fabrication capabilities. Pictured in its raw metallic finish inside our GIDC workshop before paint coating, this exchanger features heavy-wall carbon steel shell casing and thick red-painted circular locking flanges. Precision-drilled internal tube sheets house high-dwell copper-nickel tube bundles.",
+        excerpt: "High-pressure fluid process shell and tube heat exchanger for mill turbine and power plants.",
+        description: "Designed for rigorous processing loops in sugar industries, distillery plants, steel mills, and power plants. This high-capacity shell and tube heat exchanger handles oil cooling, compressor cooling, or steam superheating. Utilizes torque expanded tube to tube plate joints inside a robust IS 2062 carbon steel shell.",
         features: [
-            "Thick boiler-grade carbon steel shell provides maximum strength",
-            "Polished raw metallic steel finish showcases high welding integrity",
-            "Reinforced red-painted circular locking flanges prevent joint leaks",
-            "Precision internal tube sheets drill-tapered to prevent tube wear",
-            "Spot-radiographed welding seams validate long operational lifecycles",
-            "Designed in strict compliance with ASME Sec VIII Div 1 codes"
+            "Engineered in compliance with TEMA and ASME Section VIII guidelines",
+            "Thick boiler-grade carbon steel shell casing for pressure durability",
+            "Torque expanded tube-to-tube plate joints prevent high stress leaks",
+            "Supports multi-pass routing on both shell and tube sides",
+            "Available in fixed tube, floating head, or double tube layouts",
+            "Vertical or horizontal mounting base configurations available"
         ],
         specifications: {
-            "Shell Casing Standard": "ASTM A53 Heavy-wall Carbon Steel",
-            "Internal Tubes Bundle": "High-integrity Copper-Nickel (90/10)",
-            "Weld Testing": "Nondestructive spot radiographic (RT) check",
-            "Operating Pressure (Shell/Tube)": "20 bar / 16 bar",
-            "Flange Bolts Pattern": "Multi-bolt heavy ANSI pattern",
-            "Weight (Dry)": "220 kg"
+            "Tube Metallurgy": "Copper, Cu-Ni (90:10 / 70:30), SS304 (seamless)",
+            "Shell & Headers": "Heavy Carbon Steel IS 2062",
+            "Tube Sheets Material": "Carbon Steel IS 2062",
+            "Operating Temperature": "Up to 200°C continuous duty",
+            "Joint Construction": "Torque expanded tube sheets",
+            "Hydrostatic Test": "Tested at 10 kg/cm² (approx. 10 Bar)"
         }
     },
     {
         id: "parth-oil-cooler",
-        name: "Double-Pass Industrial Oil Cooler",
+        name: "Shell & Tube Turbine Lube Oil Cooler",
         category: "heat-transfer",
         price: "Custom Quote",
-        badge: "TEMA Class C",
+        badge: "Turbine Class",
         image: "assets/20240722_164024.jpg.jpeg",
-        excerpt: "Multi-pass shell and tube heat exchanger optimized for lube oil cooling and machinery heat extraction loops.",
-        description: "Optimized for machine tool lubrication oil cooling and hydraulic heat dissipation. The Parth Double-Pass Oil Cooler utilizes a long-barrel shell design that routes cooling liquid across a multi-pass internal baffle array, ensuring high heat-transfer coefficients while keeping pressure drops to a minimum. Finished in structural grey paint.",
+        excerpt: "Optimized oil cooler for mill turbines, power turbines, and furnace transformers.",
+        description: "Built specifically to extract heat from turbine lube oil loops and furnace transformers. Utilizing heavy-gauge carbon steel shells and multi-pass internal baffles, this cooler routes oil across high-dwell copper or copper-nickel tube bundles, achieving maximum temperature drops with minimal pressure drops.",
         features: [
-            "Long-barrel multi-pass shell design guarantees high fluid contact",
-            "Internal segment baffles induce turbulent oil flow for heat transfer",
-            "Equipped with thick base support brackets for stable alignment",
-            "Removable end bonnet covers allow direct cleaning of internal tubes",
-            "Corrosion-resistant epoxy barrier applied to internal surfaces",
-            "TEMA Class C standard compliant construction"
+            "Ideal for mill turbines, power turbines, and furnace transformers",
+            "Fixed tube or floating head type layouts for cleaning convenience",
+            "Segmented internal baffles induce turbulent oil paths for cooling",
+            "Multi-pass tube side layout maximizes contact surface areas",
+            "Finished in anti-corrosive polyurethane industrial primer",
+            "Torque expanded tube-to-plate joints with 10 kg/cm² testing"
         ],
         specifications: {
-            "Type": "Shell & Tube (Double-Pass layout)",
-            "Shell Casing Paint": "Corrosion-resistant industrial grey coating",
-            "Tube Core Material": "Seamless Copper-Nickel (C70600)",
-            "Total Surface Area": "4.5 m²",
-            "Operating Pressure": "Shell 20 bar / Tube 16 bar",
-            "Standard Mountings": "Dual pre-drilled saddle plates"
+            "Internal Tubes": "Seamless Copper, Cu-Ni (90:10), SS304",
+            "Shell Casing Paint": "Industrial grey enamel barrier",
+            "Mountings": "Dual pre-drilled carbon steel saddle brackets",
+            "Operating Pressure": "Shell side 10 bar / Tube side 10 bar",
+            "Flow Path": "Multi-pass flow configuration",
+            "Hydrostatic Test": "Factory tested at 10 kg/cm²"
         }
     },
     {
         id: "parth-utube-exchanger",
-        name: "High-Capacity U-Tube Exchanger (Grey)",
+        name: "Distillery Process Condenser & Reboiler",
         category: "heat-transfer",
         price: "Custom Quote",
-        badge: "Custom Fab",
+        badge: "Distillery Grade",
         image: "assets/20191002_135919.jpg.jpeg",
-        excerpt: "Industrial double-pass shell and tube heat exchanger featuring a massive pre-fabricated flanged U-bend bypass header.",
-        description: "The Parth High-Capacity U-Tube Exchanger is custom-fabricated for high-dwell heat absorption and intensive thermal condensation loops. Featuring a long-barrel carbon steel shell casing finished in our structural grey enamel, it integrates a prominent pre-fabricated flanged U-bend bypass header on top. This specialized double-pass header geometry forces turbulent fluid paths, maximizing mechanical contact times and temperature drops while minimizing internal pressure bottlenecks.",
+        excerpt: "High-dwell process condenser, chiller, and reboiler stack for distillery and chemical plants.",
+        description: "Our Distillery Process Condensers, Chillers, and Reboilers represent premium chemical engineering. Customized with high-density copper or stainless steel tube bundles and heavy carbon steel IS 2062 frames, these units are designed to withstand corrosive ethanol, chemical vapors, and thermal shocks.",
         features: [
-            "Robust top-mounted flanged U-bend bypass header routes dual-pass flows",
-            "Long-barrel heavy-duty carbon steel shell casing painted in structural grey",
-            "ASME Section VIII Div 1 compliant weld structures with spot radiography",
-            "Copper-Nickel (90/10) core tube bundles resist heavy chemical scaling",
-            "Vibration-dampened saddle mounting brackets for solid alignment safety",
-            "Pneumatically factory leak-checked at 1.5x design pressure (24 bar hydro)"
+            "Custom engineered for distillery plants and chemical refineries",
+            "Designed as high-capacity process condensations and reboiling loops",
+            "Seamless copper-nickel or SS304 tubes resist chemical wear",
+            "Equipped with thick base support brackets for stable alignment",
+            "Spot-radiographed welds ensure absolute shell safety compliance",
+            "Continuously tested at 10 kg/cm² for zero vapor leaks"
         ],
         specifications: {
-            "Layout Design": "ASME Shell & Tube (With external U-header bypass loop)",
-            "Core Tube Metallurgy": "Seamless high-purity Copper-Nickel (C70600)",
-            "Design Flow Pressure": "Shell 16 bar / Tube 20 bar",
-            "Test Pressure (Hydro)": "24 bar hydrostatic testing certificate",
-            "Flange Nozzles Spec": "ANSI B16.5 Standard DN50 RF nozzle joints",
-            "Max Operating Temp": "Up to 180°C under continuous run"
+            "MOC Shell & Headers": "Carbon Steel IS 2062 / SS304",
+            "MOC Tube Bundle": "Seamless Copper-Nickel or SS304",
+            "Layout Type": "ASME U-Tube or Fixed Tube Sheet layout",
+            "Operating Pressure": "Shell 10 bar / Tube 10 bar",
+            "Design Standards": "ASME Section VIII Div 1 & TEMA Class C",
+            "Hydrostatic Test": "Tested at 10 kg/cm²"
         }
     },
     {
         id: "centrifugal-blower",
-        name: "Centrifugal Air Blower Fan",
+        name: "Centrifugal Hot Air Blower & Steam Heater",
         category: "air-movement",
         price: "Custom Quote",
-        badge: "Heavy Duty",
+        badge: "Sugar Industry",
         image: "assets/IMG-20260408-WA0063.jpg.jpeg",
-        excerpt: "High-volume centrifugal blower, featuring backward-curved steel impellers, safety-orange casing, and direct-coupled shafts.",
-        description: "Engineered to deliver continuous air volumes against high static resistances. The Parth Centrifugal Blower Fan excels in industrial ventilation, dust extraction, and process combustion air supply. Outfitted with continuously welded scroll housing and dynamically balanced impellers to ensure G2.5 vibration-free running.",
+        excerpt: "High-volume steam heater fin tube type blower fan, custom-engineered for sugar industry hoppers.",
+        description: "Designed for continuous hot air supply to sugar hoppers and air heating processes. Combines a high-volume dynamically balanced centrifugal blower with an integrated steam heater fin tube core. Utilizes SS304 seamless tubes with GI spiral fins for excellent heat transmission.",
         features: [
-            "Thick continuously welded steel scroll casing for high durability",
-            "Dynamically balanced backward-curved impellers (ISO G2.5 standard)",
-            "Direct-coupled high-torque TEFC induction motors (IP55 enclosure)",
-            "Heavy-duty oil-lubricated bearings with external grease points",
-            "Rotatable casing design allows up to 8 discharge angles",
-            "Optional spark-resistant construction for hazardous fumes"
+            "High capacity ranges from 8000 m³/hr to 12,500 m³/hr",
+            "Static outlet pressure handles 110 mm WG to 140 mm WG",
+            "Direct-drive system powered by 5 HP to 10 HP TEFC motor",
+            "SS304 seamless heating tubes with GI spiral fin wraps",
+            "Dynamically balanced backward-curved impellers (ISO G2.5)",
+            "Thick continuously welded scroll casing with orange safety paint"
         ],
         specifications: {
-            "Volumetric Flow Rate": "4500 m³/hr (2650 CFM)",
-            "Static Outlet Pressure": "3800 Pa (15.2 in. WG)",
-            "Main Drive Motor": "15 kW (20 HP) 3-Phase induction TEFC",
-            "Impeller Spec": "560mm Diameter, backward-curved high-grade steel",
-            "Rotational Operating Speed": "2900 RPM",
-            "Sound Level Rating": "78 dBA at 1.5 meters"
+            "Volumetric Capacity": "8000 m³/hr to 12,500 m³/hr",
+            "Static Pressure": "110 mm WG to 140 mm WG",
+            "Drive Motor Spec": "5 HP to 10 HP / 1440 RPM direct-coupled",
+            "Heating Fin Tubes": "SS304 seamless core with GI spiral fins",
+            "Casing Material": "Thick continuously welded Carbon Steel",
+            "Operating Temp": "Continuous steam cycles up to 180°C"
         }
     },
     {
@@ -193,8 +193,8 @@ const DEFAULT_PRODUCTS = [
         price: "Custom Quote",
         badge: "ASME U-Stamp",
         image: "assets/20221013_192116.jpg.jpeg",
-        excerpt: "Custom carbon steel pressure vessel cylinder, certified for compressed air storage, chemical mixing, or high-pressure gas receiver loops.",
-        description: "The ASME Process Pressure Vessel represents the peak of our steel fabrication capabilities. Fabricated by our certified welding team, these tanks are designed for compressed air containment, nitrogen receivers, or process buffer tanks. Fully spot-radiographed to ensure absolute weld joint integrity, and lined inside with an advanced anti-corrosion epoxy barrier.",
+        excerpt: "Heavy carbon steel pressure vessel cylinder, certified for compressed air storage, mixing, or gas receivers.",
+        description: "Representing our elite welding and steel fabrication capabilities. Fabricated by certified engineers, these ASME process vessels handle high-pressure gas receivers, nitrogen buffers, or chemical mixing under Section VIII Boiler Code standards.",
         features: [
             "Fully ASME Section VIII Division 1 compliant code construction",
             "Spot radiographed welding seams (RT-3) for structural validation",
@@ -214,178 +214,210 @@ const DEFAULT_PRODUCTS = [
     },
     {
         id: "parth-copper-condenser",
-        name: "Copper Core Finned Radiator Bank",
+        name: "Fin Tube Type Radiator for HT Motors",
         category: "heat-transfer",
         price: "Custom Quote",
-        badge: "High Temp",
+        badge: "HT Motor Grade",
         image: "assets/20191002_135751.jpg.jpeg",
-        excerpt: "High-density copper tube finned radiator core stack designed for alternator and heavy HT motor cooling.",
-        description: "The Copper Core Finned Radiator Bank features dense seamless copper heating tubes mechanically expanded into corrugated aluminum fins to guarantee maximum thermal surface area contact. Designed for alternator housing, generators, and HT motor cooling systems.",
+        excerpt: "High-density spiral grooved copper finned radiator core specifically designed for HT motor cooling.",
+        description: "The Parth Fin Tube Type Radiator is engineered for large high-tension (HT) motors operating in power stations, steel mills, and cement industries. Outfitted with high-density spiral grooved copper core tubes mechanically expanded to eliminate air gaps, providing maximum heat transfer under high load operations.",
         features: [
-            "Dense seamless copper core tubes prevent heat scaling",
-            "Automatic mechanical tube expansion secures 100% core contact",
-            "Rigid structural framing supports multi-row tube depths",
-            "Standard high-volume flanged intake and bleed ports"
+            "Specifically designed for large high-tension (HT) motor cooling loops",
+            "High-density spiral grooved copper or wire wound copper fins",
+            "Seamless copper or copper-nickel core tubes resist thermal scale",
+            "Rigid carbon steel side frame prevents mechanical deflection",
+            "Supports multi-row tube depths to handle large oil or water flows",
+            "Factory pressure tested at 1.5x working pressure for safety"
         ],
         specifications: {
-            "Materials": "Copper core, Aluminum fins, Carbon Steel Frame",
-            "Design Temp": "Up to 150°C",
-            "Core Layout": "Multi-row staggered staggered tube grid",
-            "Factory Test": "1.5x hydrostatic pressure testing"
+            "Internal Core Tubes": "Seamless Copper or Cu-Ni (90:10)",
+            "Fin Grid MOC": "Spiral grooved Copper / Wire wound Copper",
+            "Operating Pressure": "12 Bar (Tested at 18 Bar hydro)",
+            "Flanged Connections": "ANSI standard flanged inlet/outlet headers",
+            "Casing Material": "Heavy galvanized structural carbon steel",
+            "Design Temperature": "Continuous run up to 135°C"
         }
     },
     {
         id: "parth-green-condenser",
-        name: "Sinnar Green Process Condenser",
+        name: "Chiller, Condenser & Reboiler (Chemical)",
         category: "heat-transfer",
         price: "Custom Quote",
-        badge: "Process Grade",
+        badge: "Chemical Grade",
         image: "assets/20221013_193105.jpg.jpeg",
-        excerpt: "Heavy-duty green process condenser stack custom fabricated for chemical, pharmaceutical, and distillery plants.",
-        description: "The Sinnar Green Process Condenser represents a specialized chemical processing build. Finished in high-resistance green industrial protective primer to shield against continuous ambient moisture and corrosive vapours.",
+        excerpt: "Process chillers, chemical condensers, and reboilers finished in anti-corrosive epoxy green coatings.",
+        description: "Specialized chemical and pharmaceutical process chiller and reboiler stacks. Finished in high-resistance green industrial protective primer to shield against corrosive vapors, vaporized chemicals, and continuous ambient moisture.",
         features: [
-            "Corrosion-resistant green chemical safety barrier primer",
-            "Heavy-wall carbon steel structural housing secures core bundle",
-            "Dual-bolted inspection doors allow direct cleaning and access",
-            "ASME Section VIII Div 1 weld compliance certified"
+            "Perfect for aggressive vapor chilling, condensing, and reboiling",
+            "Heavy-duty green poly-epoxy primer resists corrosive chemicals",
+            "Thick carbon steel IS 2062 shell houses custom alloy tube bundles",
+            "Integrated inspection windows and vapor bypass flanged necks",
+            "Spot-radiographed welds ensure absolute structural containment",
+            "Tested continuously at 10 kg/cm² for zero vapor leaks"
         ],
         specifications: {
-            "Coating": "Chemical-resistance green poly-epoxy primer",
-            "Weld Quality": "100% radiographically tested seams",
-            "Application": "Chemical refinery, distillery processes",
-            "Mounts": "Reinforced structural footings"
+            "Shell Construction": "Carbon Steel IS 2062 / SS304",
+            "Tubes Material": "SS304 / SS316 Seamless, Copper-Nickel",
+            "Exterior Finish": "Corrosion-resistant poly-epoxy chemical primer",
+            "Weld Inspection": "100% radiographic weld check certified",
+            "Working Pressure": "10 kg/cm² operating threshold",
+            "Standard Mounts": "Heavy saddle footings for stable refinery mounting"
         }
     },
     {
         id: "parth-twin-exchangers",
-        name: "Twin Process Shell & Tube Exchangers",
+        name: "Twin Alternator Radiator CACW Bank",
         category: "heat-transfer",
         price: "Custom Quote",
-        badge: "Parallel Flow",
+        badge: "Parallel Duty",
         image: "assets/20230923_035410.jpg.jpeg",
-        excerpt: "Twin industrial shell and tube heat exchangers designed for parallel flow lubrication oil loops.",
-        description: "Specially designed to handle continuous processing bypass operations. The Twin Shell & Tube Exchangers operate in parallel, allowing plant operators to divert hot oil lines during maintenance without stopping turbine cycles.",
+        excerpt: "Parallel twin CACW heat exchangers for 800 kW to 2000 kW alternators on naval ships.",
+        description: "Designed for redundancy in marine power generation. The Twin Alternator Radiator CACW Bank links two high-capacity coolers in parallel, allowing continuous thermal regulation of naval alternators even during maintenance cycles.",
         features: [
-            "Parallel double-barrel system supports continuous runtime",
-            "Seamless copper-nickel internal tube core bundles",
-            "Heavy circular locking flanges ensure zero-leak seals",
-            "Dual bleeding and fluid bypass nozzles pre-welded"
+            "Redundant parallel setup allows cleaning without alternator shutdown",
+            "CACW shroud fits 800 kW to 2000 kW alternators (CDA compliant)",
+            "Spiral grooved copper tubes torque-expanded to SS316L sheets",
+            "Equipped with sacrificial zinc anodes on seawater headers",
+            "Thick C.S. IS 2062 structural casings with inspection doors",
+            "Double-pass flow paths guarantee optimal air cooling"
         ],
         specifications: {
-            "Design Type": "Parallel Double-Barrel Shell & Tube",
-            "Operating Pressure": "Shell 20 bar / Tube 16 bar",
-            "Standards": "ASME Section VIII Standards / TEMA Class C",
-            "Dry Weight": "320 kg (Combined)"
+            "Layout Setup": "Parallel linked double-shroud system",
+            "Alternator Rating": "Sized for 800 kW to 2000 kW alternators",
+            "Headers Metallurgy": "SS316L with zinc anode plugs",
+            "Fins Metallurgy": "Spiral grooved copper & wire wound copper",
+            "Design Code": "CDA Naval standards / ASME Section VIII",
+            "Hydrostatic Test": "Tested at 10 Bar pressure"
         }
     },
     {
         id: "parth-triple-crane",
-        name: "Triple-Stack Process Exchanger Bank",
+        name: "Multi-Pass Turbine Oil Cooler Stack",
         category: "heat-transfer",
         price: "Custom Quote",
-        badge: "Custom Build",
+        badge: "Power Sector",
         image: "assets/20230923_035439.jpg.jpeg",
-        excerpt: "Triple-stack linked process heat exchangers hanging on workshop crane prior to final hydrostatic testing.",
-        description: "Representing our advanced multi-pass thermal engineering capability, the Triple-Stack Process Exchanger Bank links three high-pressure shell and tube exchangers vertically in series to maximize temperature drop spans.",
+        excerpt: "Triple-stack series-linked lube oil coolers for mill turbines, power turbines & furnace transformers.",
+        description: "Our advanced multi-pass thermal stack links three shell and tube oil coolers in series. Engineered for massive power turbines, mill drives, and furnace transformers, this system routes oil through continuous series-linked heat exchange stages to extract maximum heat.",
         features: [
-            "Triple-link shell assembly maximizes dwell heat transfers",
-            "ASME Section VIII Div 1 spot radiographed welding",
-            "Heavy carbon steel mounting saddles pre-welded to shells",
-            "Reinforced circular flanges prevent joint failures"
+            "Triple-stacked serial configuration maximizes oil temperature drops",
+            "Excellent for heavy-duty mill turbines and furnace transformers",
+            "Torque-expanded seamless copper or copper-nickel core tube bundles",
+            "Independent flanged bypass allows individual barrel maintenance",
+            "Spot-radiographed welds ensure pressure security under flow spikes",
+            "TEMA Class C and ASME Section VIII compliant design"
         ],
         specifications: {
-            "Materials": "ASTM A53 Boiler-Grade Carbon Steel Shells",
-            "Testing": "Factory hydro-tested at 24 bar (1.5x design pressure)",
-            "Connections": "High-pressure ANSI flanged nozzle ports",
-            "Weight": "480 kg"
+            "Layout Type": "ASME Shell & Tube (Triple series stack)",
+            "Casing Shell Material": "Heavy Carbon Steel IS 2062",
+            "Operating Pressure": "Shell side 10 bar / Tube side 10 bar",
+            "Core Tubes Material": "Seamless Copper-Nickel (Cu-Ni 90:10 / 70:30)",
+            "Test Pressure": "10 kg/cm² hydrostatic test certificate",
+            "Weight": "480 kg combined dry weight"
         }
     },
     {
         id: "parth-red-double-box",
-        name: "ASME Red Double-Box Exchanger",
+        name: "Centrifugal Machine Super Heater",
         category: "heat-transfer",
         price: "Custom Quote",
-        badge: "Heavy Fab",
+        badge: "Sugar Industry",
         image: "assets/20240329_183445.jpg.jpeg",
-        excerpt: "Heavy-duty red-painted industrial double-box exchanger for steel mill heating loops.",
-        description: "The Red Double-Box Heat Exchanger is specially fabricated for heavy-duty industrial steam loops in steel mills and paper processing plants. Features massive bolted header plates finished in high-heat industrial red primer.",
+        excerpt: "Heavy-duty steam-heated process super heater for centrifugal machines in sugar plants.",
+        description: "The Centrifugal Machine Super Heater and Transient Heater represent robust processing loop solutions for sugar hoppers and centrifugal separation chambers. Heavy-wall carbon steel frames enclose seamless copper-nickel tube bundles.",
         features: [
-            "Red circular structural backing flanges prevent gasket leaks",
-            "High-dwell copper tube bundles mechanical-collar expanded",
-            "Radiographed welding seams support extreme temperature cycles",
-            "Advanced chemical oxide primer protects against ambient moisture"
+            "Ideal for sugar centrifugals and high-dwell heating loops",
+            "Heavy carbon steel IS 2062 headers and shell structures",
+            "Seamless copper, copper-nickel, or SS304 torque expanded tubes",
+            "High-temperature resistant oxide primer prevents corrosion",
+            "Equipped with massive bolted header plates for safety",
+            "Engineered in compliance with TEMA and ASME codes"
         ],
         specifications: {
-            "Shell Construction": "ASTM A36 Heavy Carbon Steel Plate Casing",
-            "Design Temperature": "Up to 220°C operating temperature",
-            "Weld Quality": "Spot radiographic weld inspection certified",
-            "Flange Standards": "Heavy ANSI pattern multi-bolt flanges"
+            "Design Standard": "ASME Section VIII Div 1 Boiler Code",
+            "Tube Metallurgy": "Seamless Copper, Cu-Ni (90:10), SS304",
+            "Shell & Headers": "Carbon Steel IS 2062",
+            "Hydrostatic Test": "Tested at 10 kg/cm²",
+            "Design Temperature": "Up to 220°C steam pressure",
+            "Connections": "Multi-bolt heavy flanged nozzles"
         }
     },
     {
         id: "parth-three-coolers",
-        name: "Triple Finned Radiator Core Bank",
+        name: "Compressor Intercooler & Aftercooler Bank",
         category: "heat-transfer",
         price: "Custom Quote",
-        badge: "New Launch",
+        badge: "Compressed Air",
         image: "assets/20240812_165507.jpg.jpeg",
-        excerpt: "Bank of three industrial grey-finished process finned coolers standing in final assembly.",
-        description: "The Triple Finned Radiator Bank is built to satisfy large-scale process plant cooling requirements. Stood upright in our Sinnar assembly bays, these units demonstrate our high-volume production capability.",
+        excerpt: "High-efficiency intercooler and aftercooler radiator bank for multi-stage air compressors.",
+        description: "Designed to handle compressed air heat extraction. Utilizing copper or copper-nickel core tubes mechanically expanded into aluminum or copper spiral fins, this radiator bank serves as the primary cooling stage between compressor cycles.",
         features: [
-            "Triple core layout supports parallel or serial installation",
-            "High-density aluminum corrugated fin grid mechanics",
-            "Thick galvanized carbon steel protective casing frame",
-            "Factory hydro-tested to ensure zero operational leaks"
+            "Perfect for heavy-duty multi-stage compressor air loops",
+            "Aluminum or copper fins for sugar, steel, and power plants",
+            "Spiral crimped or wire wound fins optimize thermal heat drop",
+            "Openable headers on both sides for cleaning access",
+            "Staggered multi-row core layout limits pressure bottlenecks",
+            "100% hydrostatically leak checked at 10 Bar working pressure"
         ],
         specifications: {
-            "Structure": "Carbon steel framing, seamless copper tubes",
-            "Max Pressure": "16 bar continuous operating envelope",
-            "Weld Class": "ISO 9001:2015 certified welding shop",
-            "Paint Finish": "Corrosion-resistant grey polyurethane coating"
+            "Manufacturing Range": "Suitable for 1.5 MT to 1.5 MW compressors",
+            "Tubes MOC": "Copper, Cu-Ni (90:10 / 70:30), SS304 seamless",
+            "Fin Type": "Spiral crimped copper & aluminum, wire wound",
+            "Header Material": "C.S. IS 2062, SS304, SS316 (openable headers)",
+            "Operating Pressure": "10 Bar (150 PSI) continuous run",
+            "Tube Size": "1/2\" OD to 3/4\" OD"
         }
     },
     {
         id: "parth-grey-process-cooler",
-        name: "Finned Single-Pass Process Cooler",
+        name: "Centrifugal Machine Transient Heater",
         category: "heat-transfer",
         price: "Custom Quote",
-        badge: "Standard Build",
+        badge: "Transient Heat",
         image: "assets/20240812_165513.jpg.jpeg",
-        excerpt: "Heavy-duty single-pass grey process cooler designed for clean liquid bypass loops.",
-        description: "A compact single-pass process radiator designed for easy modular integration into clean liquid-to-air cooling systems. Features a solid-shell design painted in our flagship grey protective enamel.",
+        excerpt: "High-integrity transient steam heater, utilizing SS304 seamless tubes with GI spiral fins.",
+        description: "Specialized transient steam heater for centrifugal separation and drying machines. Compact, heavy-duty single-pass core routing minimizes internal fluid drag while maximizing steam heat transfer.",
         features: [
-            "Single-pass core routing minimizes internal fluid drag",
-            "Staggered copper tube row grid maximizes air envelope contact",
-            "Pre-drilled side mounting tabs support immediate installation",
-            "Pneumatically tested at 1.5x working pressure"
+            "Sized for centrifugal drying and transient steam heating",
+            "SS304 seamless heating tubes with GI spiral fin wraps",
+            "Heavy-wall carbon steel IS 2062 headers and frame casing",
+            "Torque expanded tube-to-plate joints avoid gasket failures",
+            "Anti-rust structural grey polyurethane paint shields casing",
+            "Pneumatically factory leak-tested at 10 kg/cm² pressure"
         ],
         specifications: {
-            "Tubes Material": "Seamless high-purity copper core",
-            "Operating Pressure": "12 bar continuous rating",
-            "Fluid Connections": "DN50 flanged bypass connection ports",
-            "Casing Material": "14-gauge Hot-Dip Galvanized sheet metal casing"
+            "Core Heating Tubes": "SS304 seamless core",
+            "Fin Material": "GI spiral fin wrapping",
+            "Mountings": "Pre-drilled side anchoring brackets",
+            "Operating Pressure": "Steam lines up to 10 kg/cm²",
+            "Nozzles Spec": "ANSI flanged inlet/outlet bypass",
+            "Joint Construction": "Torque expanded tube sheets"
         }
     },
     {
         id: "parth-rectangular-exchanger",
-        name: "ASME Rectangular Header Exchanger",
+        name: "Heat Recovery Unit & Cooling Scrubber",
         category: "heat-transfer",
         price: "Custom Quote",
-        badge: "ASME Certified",
+        badge: "Sulphur Burner",
         image: "assets/20251119_174212.jpg.jpeg",
-        excerpt: "ASME-certified rectangular header process exchanger with pre-installed flanged bypass piping.",
-        description: "The ASME Rectangular Header Exchanger is engineered for high-pressure gas extraction loops. Outfitted with pre-welded flanged bypass piping for quick connection into process lines.",
+        excerpt: "Process heat recovery unit and cooling scrubber designed for industrial sulphur burners.",
+        description: "Engineered specifically for sulphur burners in sugar mills and chemical plants. Our Heat Recovery Units and Cooling Scrubbers are built to capture extreme heat from combustion exhausts while resisting highly acidic sulphur byproducts.",
         features: [
-            "Heavy-plate rectangular header absorbs high pressure shocks",
-            "Integrated pre-welded flanged bypass piping minimizes shop piping",
-            "Radia-tested seamless copper-nickel core heating tube bundle",
-            "Full structural grey protective coating defends against moisture"
+            "Customized for sulphur burners in sugar & chemical plants",
+            "High heat capture with integrated cooling gas scrubbers",
+            "Corrosion-resistant alloys or SS316L internal core elements",
+            "Heavy-plate box headers absorb massive thermal shocks",
+            "Pre-installed flanged bypass piping for quick installation",
+            "Weld structures checked via non-destructive spot radiography"
         ],
         specifications: {
-            "Header Design": "ASME-certified heavy-plate box header",
-            "Flange Connections": "Dual DN40 flanged inlet/outlet bypass",
-            "Operating Pressure": "16 bar design (24 bar hydro tested)",
-            "Dry Weight": "210 kg"
+            "MOC Core Tubes": "Seamless SS316L / Copper-Nickel alloy",
+            "MOC Housing": "Heavy ASTM A36 / IS 2062 Carbon Steel",
+            "Flow Pressure Design": "Shell 10 bar / Tube 10 bar",
+            "Test Certification": "Factory hydro-tested at 10 Bar",
+            "Operating Temperature": "Continuous hot flue gas exposure up to 350°C",
+            "Flange Connections": "DN50 flanged bypass connection ports"
         }
     }
 ];
@@ -439,7 +471,7 @@ function toggleTheme() {
 // ==========================================================================
 
 function loadCatalog() {
-    const stored = localStorage.getItem('parth-catalog-products');
+    const stored = localStorage.getItem('parth-catalog-products-v2');
     if (stored) {
         try {
             STATE.products = JSON.parse(stored);
@@ -477,7 +509,7 @@ function loadCatalog() {
 }
 
 function saveCatalog() {
-    localStorage.setItem('parth-catalog-products', JSON.stringify(STATE.products));
+    localStorage.setItem('parth-catalog-products-v2', JSON.stringify(STATE.products));
 }
 
 function resetCatalogToDefault() {
@@ -485,7 +517,6 @@ function resetCatalogToDefault() {
         STATE.products = [...DEFAULT_PRODUCTS];
         saveCatalog();
         renderProducts();
-        renderAdminList();
         alert("Catalog database has been successfully reset to defaults.");
     }
 }

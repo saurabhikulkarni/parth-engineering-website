@@ -2950,3 +2950,218 @@ footer {
         grid-template-columns: 1fr;
     }
 }
+
+/* ==========================================================================
+   Clients Section & Vertical Scrolling Marquee
+   ========================================================================== */
+.clients-section {
+    padding: 120px 0;
+    background: radial-gradient(circle at 10% 80%, rgba(245, 158, 11, 0.03) 0%, transparent 50%), var(--bg-secondary);
+    position: relative;
+    border-top: 1px solid var(--border-color);
+    border-bottom: 1px solid var(--border-color);
+}
+
+.clients-grid {
+    display: grid;
+    grid-template-columns: 1.1fr 0.9fr;
+    gap: 5rem;
+    align-items: center;
+}
+
+@media (max-width: 968px) {
+    .clients-grid {
+        grid-template-columns: 1fr;
+        gap: 4rem;
+    }
+}
+
+.clients-content {
+    display: flex;
+    flex-direction: column;
+    gap: 1.8rem;
+}
+
+.clients-content h2 {
+    font-size: 2.8rem;
+    font-weight: 800;
+    line-height: 1.25;
+    background: linear-gradient(135deg, #ffffff 0%, #a5b4fc 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.clients-content p {
+    font-size: 1.15rem;
+    color: var(--text-secondary);
+    line-height: 1.7;
+}
+
+.clients-features {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5rem;
+    margin-top: 0.8rem;
+}
+
+@media (max-width: 640px) {
+    .clients-features {
+        grid-template-columns: 1fr;
+        gap: 1.2rem;
+    }
+}
+
+.client-feature-item {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    background: rgba(255, 255, 255, 0.02);
+    border: 1px solid var(--border-color);
+    padding: 1.2rem 1.5rem;
+    border-radius: 16px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    transition: var(--transition-smooth);
+}
+
+.client-feature-item:hover {
+    background: rgba(255, 255, 255, 0.04);
+    border-color: rgba(245, 158, 11, 0.3);
+    transform: translateY(-3px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.client-feature-icon {
+    font-size: 1.8rem;
+    filter: drop-shadow(0 2px 4px rgba(0,0,0,0.2));
+}
+
+.client-feature-text {
+    font-weight: 700;
+    font-size: 1rem;
+    color: var(--text-primary);
+}
+
+/* Vertical Marquee Panel with Top/Bottom Fade Mask */
+.vertical-marquee-panel {
+    background: linear-gradient(135deg, rgba(21, 30, 48, 0.3) 0%, rgba(10, 15, 26, 0.6) 100%);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    border-radius: 28px;
+    padding: 2.5rem;
+    position: relative;
+    height: 460px;
+    overflow: hidden;
+    box-shadow: 0 30px 60px rgba(0, 0, 0, 0.45), inset 0 1px 0 rgba(255, 255, 255, 0.08);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+}
+
+/* Mask overlays for seamless entrance and exit fading */
+.vertical-marquee-panel::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 25%;
+    background: linear-gradient(to bottom, var(--bg-secondary) 0%, transparent 100%);
+    z-index: 3;
+    pointer-events: none;
+}
+
+.vertical-marquee-panel::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 25%;
+    background: linear-gradient(to top, var(--bg-secondary) 0%, transparent 100%);
+    z-index: 3;
+    pointer-events: none;
+}
+
+.vertical-marquee-wrapper {
+    height: 100%;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.vertical-marquee-track {
+    display: flex;
+    flex-direction: column;
+    gap: 2.2rem;
+    padding: 1.1rem 0;
+    animation: scrollVerticalMarquee 28s linear infinite;
+}
+
+/* Pause marquee scroll on hover */
+.vertical-marquee-panel:hover .vertical-marquee-track {
+    animation-play-state: paused;
+}
+
+@keyframes scrollVerticalMarquee {
+    0% {
+        transform: translateY(0);
+    }
+    100% {
+        /* Loops exactly half-way through the repeated stack */
+        transform: translateY(calc(-50% - 1.1rem));
+    }
+}
+
+.marquee-logo-card {
+    width: 280px;
+    height: 110px;
+    background: rgba(255, 255, 255, 0.02);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1.5rem;
+    transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+}
+
+.marquee-logo-card:hover {
+    background: rgba(255, 255, 255, 0.06);
+    border-color: rgba(245, 158, 11, 0.3);
+    transform: translateY(-2px) scale(1.03);
+    box-shadow: 0 15px 35px rgba(245, 158, 11, 0.15);
+}
+
+.marquee-logo-card img {
+    max-width: 92%;
+    max-height: 85%;
+    object-fit: contain;
+    filter: brightness(0.95) contrast(1.05);
+    transition: all 0.4s ease;
+}
+
+.marquee-logo-card:hover img {
+    filter: brightness(1) contrast(1.1);
+}
+
+/* Light theme color and backdrop adaptations */
+[data-theme="light"] .marquee-logo-card {
+    background: rgba(0, 0, 0, 0.02);
+    border-color: rgba(0, 0, 0, 0.06);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.04);
+}
+[data-theme="light"] .marquee-logo-card:hover {
+    background: rgba(0, 0, 0, 0.04);
+    border-color: rgba(245, 158, 11, 0.3);
+}
+[data-theme="light"] .vertical-marquee-panel {
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.7) 0%, rgba(241, 245, 249, 0.8) 100%);
+    border-color: rgba(0, 0, 0, 0.05);
+    box-shadow: 0 30px 60px rgba(0, 0, 0, 0.08), inset 0 1px 0 rgba(255, 255, 255, 0.8);
+}
+[data-theme="light"] .clients-content h2 {
+    background: linear-gradient(135deg, #1e293b 0%, #4338ca 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+

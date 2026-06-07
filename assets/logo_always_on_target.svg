@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="100%" height="100%">
+  <style>
+    .target-hindi { font-family: 'Noto Sans Devanagari', 'Noto Sans', sans-serif; font-weight: 800; font-size: 14px; fill: #ffffff; text-shadow: 0px 1px 2px #000; }
+    .target-eng { font-family: 'Outfit', 'Montserrat', 'Inter', sans-serif; font-weight: 800; font-size: 12px; fill: #ffffff; text-shadow: 0px 1px 2px #000; }
+  </style>
+  <rect width="100%" height="100%" fill="transparent" />
+  <circle cx="100" cy="100" r="95" fill="none" stroke="#d4af37" stroke-width="2" />
+  
+  <!-- Target circles -->
+  <g transform="translate(100, 100)">
+    <circle cx="0" cy="0" r="75" fill="#801818" stroke="#d4af37" stroke-width="1.5" />
+    <circle cx="0" cy="0" r="65" fill="none" stroke="#d4af37" stroke-width="1" stroke-dasharray="2,2" />
+    <circle cx="0" cy="0" r="55" fill="none" stroke="#d4af37" stroke-width="1.5" />
+    <circle cx="0" cy="0" r="45" fill="none" stroke="#d4af37" stroke-width="1" stroke-dasharray="2,2" />
+    <circle cx="0" cy="0" r="35" fill="none" stroke="#d4af37" stroke-width="1.5" />
+    
+    <!-- Crosshairs -->
+    <line x1="-80" y1="0" x2="80" y2="0" stroke="#d4af37" stroke-width="1.5" />
+    <line x1="0" y1="-80" x2="0" y2="80" stroke="#d4af37" stroke-width="1.5" />
+    
+    <!-- Central target sight graphic (letter F shape or sight) -->
+    <path d="M-20,-20 L20,-20 L20,20 L-20,20 Z" fill="none" stroke="#d4af37" stroke-width="2.5" />
+    <circle cx="0" cy="0" r="10" fill="#d4af37" />
+  </g>
+  
+  <!-- Text paths -->
+  <path id="curve-top" d="M 30 100 A 70 70 0 0 1 170 100" fill="none" />
+  <path id="curve-bottom" d="M 170 100 A 70 70 0 0 1 30 100" fill="none" />
+  
+  <text>
+    <textPath href="#curve-top" startOffset="50%" text-anchor="middle">
+      <tspan class="target-hindi">सदैव लक्ष्य पर</tspan>
+    </textPath>
+  </text>
+  <text>
+    <textPath href="#curve-bottom" startOffset="50%" text-anchor="middle">
+      <tspan class="target-eng">Always On Target</tspan>
+    </textPath>
+  </text>
+</svg>

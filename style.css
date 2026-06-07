@@ -1560,6 +1560,16 @@ footer {
     flex-shrink: 0;
 }
 
+.footer-contact-list a {
+    color: inherit;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.footer-contact-list a:hover {
+    color: var(--accent-primary);
+}
+
 .footer-newsletter h4 {
     font-size: 1rem;
     text-transform: uppercase;

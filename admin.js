@@ -418,6 +418,270 @@ const DEFAULT_PRODUCTS = [
             "Operating Temperature": "Continuous hot flue gas exposure up to 350°C",
             "Flange Connections": "DN50 flanged bypass connection ports"
         }
+    },
+    {
+        id: "parth-radiator-cda",
+        name: "CACW Alternator Cooler (Model CACW-1200)",
+        category: "heat-transfer",
+        price: "Custom Quote",
+        badge: "Marine Duty",
+        image: "assets/image_98ec0437.png",
+        excerpt: "Customized marine air cooler with heavy protective steel frame and Cu-Ni tubes.",
+        description: "Specialized CACW marine alternator air cooler. Built to meet naval requirements, this heat exchanger handles high-capacity cooling for alternator frames while preventing thermal scale or saltwater corrosion in maritime environments.",
+        features: [
+            "Heavy IS 2062 carbon steel structural enclosing framework",
+            "Concentric marine-duty copper-nickel tube bundles",
+            "Automatic torque-expanded tube sheets prevent thermal scale leaks",
+            "Staggered multi-row tube alignment optimizes heat transfer"
+        ],
+        specifications: {
+            "Core Tubes MOC": "Seamless Copper-Nickel (Cu-Ni 90:10)",
+            "Frames paint": "Polyurethane industrial grey paint",
+            "Operating Pressure": "10 Bar max working threshold",
+            "Seawater Headers": "Sacrificial zinc anode protection"
+        }
+    },
+    {
+        id: "parth-double-tube-var",
+        name: "Marine Double Tube Heat Exchanger (Model DTHX-500)",
+        category: "heat-transfer",
+        price: "Custom Quote",
+        badge: "Fail-Safe",
+        image: "assets/image_a60a6044.png",
+        excerpt: "Concentric double-wall marine heat exchanger with fail-safe leakage detection slots.",
+        description: "Engineered specifically for heavy marine motors. Routes cooling water across concentric double-walled copper-nickel tube bundles, providing complete physical separation of process fluids and visual leak detection slots.",
+        features: [
+            "Concentric double-wall tube barrier avoids cross-contamination",
+            "Visual leakage detection channels prevent internal scaling",
+            "High-dwell copper fins optimize heat-transfer coefficients",
+            "Bullet expanded tube-to-tube sheets for secure mounting"
+        ],
+        specifications: {
+            "Inner Tube": "Seamless Copper-Nickel (Cu-Ni 90:10)",
+            "Outer Tube": "Seamless Copper",
+            "Design standards": "ASME Section VIII Div 1 & CDA Marine",
+            "Hydrostatic Test": "Tested at 1.5x design pressure"
+        }
+    },
+    {
+        id: "parth-alternator-radiator-var",
+        name: "Heavy-Duty Alternator Radiator (Model AR-1500)",
+        category: "heat-transfer",
+        price: "Custom Quote",
+        badge: "2.0 MW Ready",
+        image: "assets/image_b34b4073.png",
+        excerpt: "Large-capacity radiator core with openable headers, optimized for 2.0 MW DG Sets.",
+        description: "Large industrial air cooler radiator. Designed for power generation loops, it features openable headers for mechanical tube cleaning and thick galvanized steel side frames to withstand continuous vibration.",
+        features: [
+            "Sized for continuous duty 1.5 MW to 2.0 MW power systems",
+            "Openable headers on both sides allow direct tube cleaning",
+            "Staggered copper fin wraps maximize heat-transfer surface area",
+            "Galvanized side frameworks protect core stack integrity"
+        ],
+        specifications: {
+            "Heating Tubes": "Seamless Copper or SS304 core",
+            "Headers material": "Heavy-duty Carbon Steel (openable type)",
+            "Working Pressure": "10 Bar (Tested at 15 Bar hydro)",
+            "Flange connections": "DN80 standard flanged bypass inlet/outlet"
+        }
+    },
+    {
+        id: "parth-ht-radiator-var",
+        name: "ASME Finned HT Motor Radiator (Model HTR-800)",
+        category: "heat-transfer",
+        price: "Custom Quote",
+        badge: "High-Tension",
+        image: "assets/image_b9ad94 (1).png",
+        excerpt: "High-density copper finned radiator, optimized for large high-tension motor cooling loops.",
+        description: "Heavy-duty HT motor cooling radiator core. Built to handle scale-free heat dissipation in steel mills and chemical refineries, this core uses mechanically expanded copper fin tubes to ensure optimal heat conductivity.",
+        features: [
+            "Designed for large high-tension (HT) motor oil and water loops",
+            "Staggered fin tube alignment improves thermal performance",
+            "Mechanical expansion ensures zero core air-gaps for conduction",
+            "Rigid carbon steel side frame prevents structural warping"
+        ],
+        specifications: {
+            "Core Tubes": "Seamless Copper / Cu-Ni (90:10)",
+            "Fin Grid Wrap": "Spiral grooved copper / Wire wound copper",
+            "Operating Temp": "Continuous run times up to 135°C",
+            "Hydrostatic Test": "Factory tested at 18 Bar"
+        }
+    },
+    {
+        id: "parth-shell-condenser-var",
+        name: "High-Pressure Shell & Tube Condenser (Model STC-150)",
+        category: "heat-transfer",
+        price: "Custom Quote",
+        badge: "TEMA Class C",
+        image: "assets/image_beb7e65c.png",
+        excerpt: "Multi-pass fluid process shell and tube heat exchanger for turbine steam and oil cooling.",
+        description: "Process shell and tube condenser. Designed in compliance with TEMA Class C guidelines, this multi-pass heat exchanger handles high-capacity steam condensation and turbine oil cooling in heavy processing plants.",
+        features: [
+            "Complies with ASME Section VIII and TEMA design standards",
+            "Thick boiler-grade carbon steel shell casing for pressure containment",
+            "Torque-expanded tube-to-tube plate joints avoid fluid leaks",
+            "Multi-pass design maximizes heat transfer surface area"
+        ],
+        specifications: {
+            "Shell & Headers": "Carbon Steel IS 2062",
+            "Tube bundle MOC": "Seamless Copper / Cu-Ni (90:10 / 70:30)",
+            "Joint Construction": "Torque expanded tube sheets",
+            "Hydrostatic Test": "Tested at 10 kg/cm²"
+        }
+    },
+    {
+        id: "parth-distillery-reboiler-var",
+        name: "Process Reboiler Stack (Model PRB-300)",
+        category: "heat-transfer",
+        price: "Custom Quote",
+        badge: "U-Tube Type",
+        image: "assets/image_c3593ce2.png",
+        excerpt: "High-capacity reboiler stack with U-Tube bundle, customized for distilleries.",
+        description: "Heavy distillery process reboiler. Features a removable ASME U-tube bundle layout for easy mechanical cleaning, and a spot-radiographed shell casing built to withstand aggressive ethanol and chemical vapors.",
+        features: [
+            "Removable U-tube bundle layout allows complete cleaning access",
+            "Spot-radiographed shell welds certify structural integrity",
+            "Alloy tube elements resist continuous corrosion",
+            "Heavy-duty saddle footings simplify stable floor mounting"
+        ],
+        specifications: {
+            "Bundle Layout": "ASME U-Tube design TEMA Class C",
+            "Tubes Metallurgy": "Seamless SS304 or SS316L",
+            "Shell Casing": "Boiler plate Carbon Steel IS 2062",
+            "Working Pressure": "10 kg/cm² operating threshold"
+        }
+    },
+    {
+        id: "parth-centrifugal-blower-var",
+        name: "Centrifugal Air Blower (Model CAB-100)",
+        category: "air-movement",
+        price: "Custom Quote",
+        badge: "Direct Drive",
+        image: "assets/image_ce0ebd40.png",
+        excerpt: "Direct-drive centrifugal blower with SS304 steam heating fin tubes, sized for sugar hoppers.",
+        description: "Industrial hot air supply blower. Combines a dynamically balanced scroll impeller with a steam heater core, providing continuous hot air flow to dry products in sugar and food processing plants.",
+        features: [
+            "Volumetric air capacity ranges from 8000 to 12500 m³/hr",
+            "Direct-drive design powered by 7.5 HP / 1440 RPM TEFC motor",
+            "SS304 heating core tubes with helical GI spiral fins",
+            "Impellers dynamically balanced to ISO G2.5 for vibration-free runtimes"
+        ],
+        specifications: {
+            "Static Pressure": "110 mm WG to 140 mm WG",
+            "Motor Power": "7.5 HP direct-coupled motor",
+            "Heating fin tubes": "SS304 seamless with GI spiral fins",
+            "Scroll Housing": "Continuously welded Carbon Steel plate"
+        }
+    },
+    {
+        id: "parth-pressure-vessel-var",
+        name: "ASME Compressed Air Buffer Vessel (Model AV-1000)",
+        category: "fabrication",
+        price: "Custom Quote",
+        badge: "RT-3 Inspected",
+        image: "assets/image_e1f25d3d.png",
+        excerpt: "High-pressure carbon steel buffer tank with internal rust-resistant epoxy lining.",
+        description: "ASME code compressed air buffer receiver. Fabricated using high-strength boiler plate carbon steel, this vessel is designed for compressed air storage, nitrogen buffering, or gas mixing under high pressure.",
+        features: [
+            "ASME Section VIII Div 1 Boiler Code compliant construction",
+            "Weld seams 100% checked via spot radiography (RT-3)",
+            "Moisture-resistant internal epoxy coating prevents interior rust",
+            "Four reinforced flanged service ports with heavy gaskets"
+        ],
+        specifications: {
+            "Volume capacity": "1000 Liters (1.0 m³)",
+            "Shell Plate MOC": "Boiler grade Carbon Steel (8mm / 10mm thickness)",
+            "Max working pressure": "16 Bar (Factory hydro-tested at 24 Bar)",
+            "Connections": "4x DN50 (2\") RF Flanges"
+        }
+    },
+    {
+        id: "parth-turbine-cooler-var",
+        name: "Turbine Lube Oil Cooler (Model OCS-400)",
+        category: "heat-transfer",
+        price: "Custom Quote",
+        badge: "Multi-Pass",
+        image: "assets/image_ee27cfdc.png",
+        excerpt: "Series-linked shell & tube lube oil cooler stack, optimized for power turbines.",
+        description: "Heavy turbine lube oil cooler barrel. Designed to lower the temperatures of high-velocity oil loops in mill turbines and furnace transformers, this barrel uses internal baffles to create highly turbulent, efficient flow cycles.",
+        features: [
+            "Fixed tube or floating head layouts for custom configurations",
+            "Segmented internal baffles create turbulent flow for heat removal",
+            "Finished in protective grey polyurethane anti-corrosive primer",
+            "Torque-expanded joints assure zero water-in-oil leakages"
+        ],
+        specifications: {
+            "Internal Tubes MOC": "Seamless Copper-Nickel (Cu-Ni 90:10)",
+            "Shell Casing": "Heavy Carbon Steel IS 2062 barrel",
+            "Working Pressure": "10 Bar shell / 10 Bar tube side",
+            "Hydrostatic Test": "Tested at 10 kg/cm²"
+        }
+    },
+    {
+        id: "parth-sulphur-scrubber-var",
+        name: "Sulphur Scrubber & HRU (Model HRU-500)",
+        category: "heat-transfer",
+        price: "Custom Quote",
+        badge: "Alloy Core",
+        image: "assets/image_f2140cc9 (1).png",
+        excerpt: "Corrosion-resistant heat recovery unit and flue-gas scrubber for sulphur burners.",
+        description: "Process heat recovery unit. Sized specifically to capture flue gas heat from chemical sulphur burners, this unit uses SS316L tubes and box headers to resist highly acidic and hot combustion gases.",
+        features: [
+            "Designed for sulphur burning exhausts in sugar and chemical plants",
+            "Stainless steel SS316L core elements resist continuous acid scaling",
+            "Heavy-plate structural headers absorb extreme thermal shocks",
+            "Spot-radiographed weld joints ensure pressure safety"
+        ],
+        specifications: {
+            "Core Tubes MOC": "Seamless SS316L / Copper-Nickel alloy",
+            "Operating Temp": "Handles hot flue gas streams up to 350°C",
+            "Casing Metallurgy": "Heavy ASTM A36 / IS 2062 Carbon Steel",
+            "Hydrostatic Test": "Factory tested at 10 Bar pressure"
+        }
+    },
+    {
+        id: "parth-sulphur-scrubber-var-2",
+        name: "Sulphur Scrubber & HRU (Model HRU-500A)",
+        category: "heat-transfer",
+        price: "Custom Quote",
+        badge: "Alloy Core",
+        image: "assets/image_f2140cc9.png",
+        excerpt: "Corrosion-resistant heat recovery unit and flue-gas scrubber for sulphur burners.",
+        description: "Process heat recovery unit. Sized specifically to capture flue gas heat from chemical sulphur burners, this unit uses SS316L tubes and box headers to resist highly acidic and hot combustion gases.",
+        features: [
+            "Designed for sulphur burning exhausts in sugar and chemical plants",
+            "Stainless steel SS316L core elements resist continuous acid scaling",
+            "Heavy-plate structural headers absorb extreme thermal shocks",
+            "Spot-radiographed weld joints ensure pressure safety"
+        ],
+        specifications: {
+            "Core Tubes MOC": "Seamless SS316L / Copper-Nickel alloy",
+            "Operating Temp": "Handles hot flue gas streams up to 350°C",
+            "Casing Metallurgy": "Heavy ASTM A36 / IS 2062 Carbon Steel",
+            "Hydrostatic Test": "Factory tested at 10 Bar pressure"
+        }
+    },
+    {
+        id: "parth-sulphur-scrubber-var-3",
+        name: "Sulphur Scrubber & HRU (Model HRU-500B)",
+        category: "heat-transfer",
+        price: "Custom Quote",
+        badge: "Alloy Core",
+        image: "assets/image_f2140cc9 (2).png",
+        excerpt: "Corrosion-resistant heat recovery unit and flue-gas scrubber for sulphur burners.",
+        description: "Process heat recovery unit. Sized specifically to capture flue gas heat from chemical sulphur burners, this unit uses SS316L tubes and box headers to resist highly acidic and hot combustion gases.",
+        features: [
+            "Designed for sulphur burning exhausts in sugar and chemical plants",
+            "Stainless steel SS316L core elements resist continuous acid scaling",
+            "Heavy-plate structural headers absorb extreme thermal shocks",
+            "Spot-radiographed weld joints ensure pressure safety"
+        ],
+        specifications: {
+            "Core Tubes MOC": "Seamless SS316L / Copper-Nickel alloy",
+            "Operating Temp": "Handles hot flue gas streams up to 350°C",
+            "Casing Metallurgy": "Heavy ASTM A36 / IS 2062 Carbon Steel",
+            "Hydrostatic Test": "Factory tested at 10 Bar pressure"
+        }
     }
 ];
 
@@ -466,7 +730,7 @@ function toggleTheme() {
 // ==========================================================================
 
 function loadCatalog() {
-    const stored = localStorage.getItem('parth-catalog-products-v2');
+    const stored = localStorage.getItem('parth-catalog-products-v4');
     if (stored) {
         try {
             STATE.products = JSON.parse(stored);
@@ -485,7 +749,7 @@ function loadCatalog() {
                 )
             );
             
-            const isMissingNewDefaults = !STATE.products.some(p => p.id === 'parth-three-coolers');
+            const isMissingNewDefaults = !STATE.products.some(p => p.id === 'parth-sulphur-scrubber-var-3');
             
             if (hasOldAssets || isMissingNewDefaults) {
                 console.log("Old mock assets or missing default products detected. Automatically migrating to today's real Sinnar workshop photos.");
@@ -504,11 +768,11 @@ function loadCatalog() {
 }
 
 function saveCatalog() {
-    localStorage.setItem('parth-catalog-products-v2', JSON.stringify(STATE.products));
+    localStorage.setItem('parth-catalog-products-v4', JSON.stringify(STATE.products));
 }
 
 function resetCatalogToDefault() {
-    if (confirm("Are you sure you want to reset the catalog database? This will clear all custom added items and restore the default 16 engineering products.")) {
+    if (confirm("Are you sure you want to reset the catalog database? This will clear all custom added items and restore the default 28 engineering products.")) {
         STATE.products = [...DEFAULT_PRODUCTS];
         saveCatalog();
         renderAdminCatalog();

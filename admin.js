@@ -9,7 +9,7 @@ const DEFAULT_PRODUCTS = [
         category: "heat-transfer",
         price: "Custom Quote",
         badge: "CDA Approved",
-        image: "assets/20200828_145056.jpg.jpeg",
+        image: "assets/1780297226032.png",
         excerpt: "High-efficiency marine CACW cooler suitable for 800 kW to 2000 kW alternator systems on Indian Navy ships.",
         description: "Our CACW Heat Exchangers with enclosure shrouds are built to withstand rigorous naval conditions. Designed for 800 kW to 2000 kW alternators on Indian Navy ships under CDA guidelines. Heavy carbon steel enclosure sheets prevent vibration fatigue under continuous ship operations. Incorporates automatic mechanical tube expansions, high-dwelling copper-nickel cooling tubes, and sacrificial zinc anode plugs for total saltwater corrosion defense.",
         features: [
@@ -35,7 +35,7 @@ const DEFAULT_PRODUCTS = [
         category: "heat-transfer",
         price: "Custom Quote",
         badge: "Marine Grade",
-        image: "assets/20220819_173459.jpg.jpeg",
+        image: "assets/1780325884295.png",
         excerpt: "Fail-safe double-tube heat exchanger for 250 kW to 2000 kW motors and alternators in marine environments.",
         description: "The Parth Double Tube Type Heat Exchanger is engineered specifically for 250 kW to 2000 kW naval motor and alternator systems (CDA compliant). Incorporates concentric inner and outer tubes to prevent oil-water contamination in critical marine setups. Features bullet expansion throughout the tube layout and torque-expanded tube sheets to secure joints.",
         features: [
@@ -61,7 +61,7 @@ const DEFAULT_PRODUCTS = [
         category: "heat-transfer",
         price: "Custom Quote",
         badge: "1.5 MW Max",
-        image: "assets/20190818_111132.jpg.jpeg",
+        image: "assets/image_20da5ea3.png",
         excerpt: "Heavy-duty industrial air cooler/radiator suitable for 1.5 MT to 1.5 MW alternators and DG sets.",
         description: "Engineered for massive thermal dissipation in alternators, DG sets, and HT motors. Featuring openable type headers on both sides to allow direct tube cleaning, this radiator utilizes spiral crimped or wire wound copper and aluminum fins for maximum air contact efficiency.",
         features: [
@@ -87,7 +87,7 @@ const DEFAULT_PRODUCTS = [
         category: "heat-transfer",
         price: "Custom Quote",
         badge: "Boiler Grade",
-        image: "assets/20240812_165457.jpg.jpeg",
+        image: "assets/image_22b7ebb.png",
         excerpt: "High-pressure fluid process shell and tube heat exchanger for mill turbine and power plants.",
         description: "Designed for rigorous processing loops in sugar industries, distillery plants, steel mills, and power plants. This high-capacity shell and tube heat exchanger handles oil cooling, compressor cooling, or steam superheating. Utilizes torque expanded tube to tube plate joints inside a robust IS 2062 carbon steel shell.",
         features: [
@@ -113,7 +113,7 @@ const DEFAULT_PRODUCTS = [
         category: "heat-transfer",
         price: "Custom Quote",
         badge: "Turbine Class",
-        image: "assets/20240722_164024.jpg.jpeg",
+        image: "assets/image_29f87786.png",
         excerpt: "Optimized oil cooler for mill turbines, power turbines, and furnace transformers.",
         description: "Built specifically to extract heat from turbine lube oil loops and furnace transformers. Utilizing heavy-gauge carbon steel shells and multi-pass internal baffles, this cooler routes oil across high-dwell copper or copper-nickel tube bundles, achieving maximum temperature drops with minimal pressure drops.",
         features: [
@@ -139,7 +139,7 @@ const DEFAULT_PRODUCTS = [
         category: "heat-transfer",
         price: "Custom Quote",
         badge: "Distillery Grade",
-        image: "assets/20191002_135919.jpg.jpeg",
+        image: "assets/image_34ae1bf4.png",
         excerpt: "High-dwell process condenser, chiller, and reboiler stack for distillery and chemical plants.",
         description: "Our Distillery Process Condensers, Chillers, and Reboilers represent premium chemical engineering. Customized with high-density copper or stainless steel tube bundles and heavy carbon steel IS 2062 frames, these units are designed to withstand corrosive ethanol, chemical vapors, and thermal shocks.",
         features: [
@@ -165,7 +165,7 @@ const DEFAULT_PRODUCTS = [
         category: "air-movement",
         price: "Custom Quote",
         badge: "Sugar Industry",
-        image: "assets/IMG-20260408-WA0063.jpg.jpeg",
+        image: "assets/image_36f63ab2.png",
         excerpt: "High-volume steam heater fin tube type blower fan, custom-engineered for sugar industry hoppers.",
         description: "Designed for continuous hot air supply to sugar hoppers and air heating processes. Combines a high-volume dynamically balanced centrifugal blower with an integrated steam heater fin tube core. Utilizes SS304 seamless tubes with GI spiral fins for excellent heat transmission.",
         features: [
@@ -191,7 +191,7 @@ const DEFAULT_PRODUCTS = [
         category: "fabrication",
         price: "Custom Quote",
         badge: "ASME U-Stamp",
-        image: "assets/20221013_192116.jpg.jpeg",
+        image: "assets/image_41a633d1.png",
         excerpt: "Heavy carbon steel pressure vessel cylinder, certified for compressed air storage, mixing, or gas receivers.",
         description: "Representing our elite welding and steel fabrication capabilities. Fabricated by certified engineers, these ASME process vessels handle high-pressure gas receivers, nitrogen buffers, or chemical mixing under Section VIII Boiler Code standards.",
         features: [
@@ -217,7 +217,7 @@ const DEFAULT_PRODUCTS = [
         category: "heat-transfer",
         price: "Custom Quote",
         badge: "HT Motor Grade",
-        image: "assets/20191002_135751.jpg.jpeg",
+        image: "assets/image_4ec85615.png",
         excerpt: "High-density spiral grooved copper finned radiator core specifically designed for HT motor cooling.",
         description: "The Parth Fin Tube Type Radiator is engineered for large high-tension (HT) motors operating in power stations, steel mills, and cement industries. Outfitted with high-density spiral grooved copper core tubes mechanically expanded to eliminate air gaps, providing maximum heat transfer under high load operations.",
         features: [
@@ -243,7 +243,7 @@ const DEFAULT_PRODUCTS = [
         category: "heat-transfer",
         price: "Custom Quote",
         badge: "Chemical Grade",
-        image: "assets/20221013_193105.jpg.jpeg",
+        image: "assets/image_590d638e.png",
         excerpt: "Process chillers, chemical condensers, and reboilers finished in anti-corrosive epoxy green coatings.",
         description: "Specialized chemical and pharmaceutical process chiller and reboiler stacks. Finished in high-resistance green industrial protective primer to shield against corrosive vapors, vaporized chemicals, and continuous ambient moisture.",
         features: [
@@ -269,7 +269,7 @@ const DEFAULT_PRODUCTS = [
         category: "heat-transfer",
         price: "Custom Quote",
         badge: "Parallel Duty",
-        image: "assets/20230923_035410.jpg.jpeg",
+        image: "assets/image_60ef3838.png",
         excerpt: "Parallel twin CACW heat exchangers for 800 kW to 2000 kW alternators on naval ships.",
         description: "Designed for redundancy in marine power generation. The Twin Alternator Radiator CACW Bank links two high-capacity coolers in parallel, allowing continuous thermal regulation of naval alternators even during maintenance cycles.",
         features: [
@@ -295,7 +295,7 @@ const DEFAULT_PRODUCTS = [
         category: "heat-transfer",
         price: "Custom Quote",
         badge: "Power Sector",
-        image: "assets/20230923_035439.jpg.jpeg",
+        image: "assets/image_64f8b168.png",
         excerpt: "Triple-stack series-linked lube oil coolers for mill turbines, power turbines & furnace transformers.",
         description: "Our advanced multi-pass thermal stack links three shell and tube oil coolers in series. Engineered for massive power turbines, mill drives, and furnace transformers, this system routes oil through continuous series-linked heat exchange stages to extract maximum heat.",
         features: [
@@ -321,7 +321,7 @@ const DEFAULT_PRODUCTS = [
         category: "heat-transfer",
         price: "Custom Quote",
         badge: "Sugar Industry",
-        image: "assets/20240329_183445.jpg.jpeg",
+        image: "assets/image_732d6ed8.png",
         excerpt: "Heavy-duty steam-heated process super heater for centrifugal machines in sugar plants.",
         description: "The Centrifugal Machine Super Heater and Transient Heater represent robust processing loop solutions for sugar hoppers and centrifugal separation chambers. Heavy-wall carbon steel frames enclose seamless copper-nickel tube bundles.",
         features: [
@@ -347,7 +347,7 @@ const DEFAULT_PRODUCTS = [
         category: "heat-transfer",
         price: "Custom Quote",
         badge: "Compressed Air",
-        image: "assets/20240812_165507.jpg.jpeg",
+        image: "assets/image_88c13d.png",
         excerpt: "High-efficiency intercooler and aftercooler radiator bank for multi-stage air compressors.",
         description: "Designed to handle compressed air heat extraction. Utilizing copper or copper-nickel core tubes mechanically expanded into aluminum or copper spiral fins, this radiator bank serves as the primary cooling stage between compressor cycles.",
         features: [
@@ -373,7 +373,7 @@ const DEFAULT_PRODUCTS = [
         category: "heat-transfer",
         price: "Custom Quote",
         badge: "Transient Heat",
-        image: "assets/20240812_165513.jpg.jpeg",
+        image: "assets/image_8d95e9f6.png",
         excerpt: "High-integrity transient steam heater, utilizing SS304 seamless tubes with GI spiral fins.",
         description: "Specialized transient steam heater for centrifugal separation and drying machines. Compact, heavy-duty single-pass core routing minimizes internal fluid drag while maximizing steam heat transfer.",
         features: [
@@ -399,7 +399,7 @@ const DEFAULT_PRODUCTS = [
         category: "heat-transfer",
         price: "Custom Quote",
         badge: "Sulphur Burner",
-        image: "assets/20251119_174212.jpg.jpeg",
+        image: "assets/image_942ff17f.png",
         excerpt: "Process heat recovery unit and cooling scrubber designed for industrial sulphur burners.",
         description: "Engineered specifically for sulphur burners in sugar mills and chemical plants. Our Heat Recovery Units and Cooling Scrubbers are built to capture extreme heat from combustion exhausts while resisting highly acidic sulphur byproducts.",
         features: [
@@ -543,7 +543,7 @@ function renderAdminCatalog() {
     listContainer.innerHTML = STATE.products.map(prod => `
         <div class="dashboard-item">
             <div class="dashboard-item-meta">
-                <img src="${prod.image}" alt="${prod.name}" onerror="this.src='assets/industrial_radiator.jpg';">
+                <img src="${prod.image}" alt="${prod.name}" onerror="this.src='assets/image_b9ad94 (1).png';">
                 <div>
                     <div class="dashboard-item-title">${prod.name}</div>
                     <div class="dashboard-item-cat">${prod.category.replace('-', ' ')}</div>
@@ -579,7 +579,7 @@ function handleAddProductSubmit(e) {
     const category = form.querySelector('#prod-category').value;
     const price = form.querySelector('#prod-price').value.trim() || "Custom Quote";
     const badge = form.querySelector('#prod-badge').value.trim();
-    const image = form.querySelector('#prod-image').value.trim() || "assets/industrial_radiator.jpg";
+    const image = form.querySelector('#prod-image').value.trim() || "assets/image_b9ad94 (1).png";
     const excerpt = form.querySelector('#prod-excerpt').value.trim();
     const description = form.querySelector('#prod-desc').value.trim();
     

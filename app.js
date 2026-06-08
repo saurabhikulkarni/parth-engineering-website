@@ -705,6 +705,7 @@ document.addEventListener('DOMContentLoaded', () => {
     renderProducts();
     setupEventListeners();
     setupHeaderScroll();
+    initScrollAnimations();
 });
 
 // ==========================================================================
@@ -1241,3 +1242,72 @@ window.downloadBrochurePDF = function(event) {
         generatePDF();
     }
 };
+
+// ==========================================================================
+// Premium UI/UX Animation & Interaction Logic
+// ==========================================================================
+
+function initScrollAnimations() {
+    // 1. Scroll-Reveal Animation Engine (Intersection Observer)
+    const revealElements = document.querySelectorAll('.reveal');
+    
+    if ('IntersectionObserver' in window) {
+        const observerOptions = {
+            root: null,
+            rootMargin: '0px',
+            threshold: 0.12 // Trigger when 12% of the element is visible
+        };
+        
+        const revealObserver = new IntersectionObserver((entries, observer) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('revealed');
+                    // Once revealed, no need to observe again
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, observerOptions);
+        
+        revealElements.forEach(el => revealObserver.observe(el));
+    } else {
+        // Fallback for older browsers
+        revealElements.forEach(el => el.classList.add('revealed'));
+    }
+
+    // 2. Scroll Progress Indicator and Back-to-Top Button Handler
+    const progressBar = document.getElementById('scroll-progress');
+    const backToTopBtn = document.getElementById('scroll-to-top');
+
+    window.addEventListener('scroll', () => {
+        // Calculate scroll progress percentage
+        const scrollTop = window.scrollY || document.documentElement.scrollTop;
+        const scrollHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+        
+        if (scrollHeight > 0) {
+            const scrollPercentage = (scrollTop / scrollHeight) * 100;
+            if (progressBar) {
+                progressBar.style.width = scrollPercentage + '%';
+            }
+        }
+
+        // Toggle back-to-top button visibility
+        if (backToTopBtn) {
+            if (scrollTop > 400) {
+                backToTopBtn.classList.add('visible');
+            } else {
+                backToTopBtn.classList.remove('visible');
+            }
+        }
+    });
+
+    // 3. Back-to-Top Click Event
+    if (backToTopBtn) {
+        backToTopBtn.addEventListener('click', () => {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+    }
+}
+

@@ -31,6 +31,7 @@
          Header Navigation
          ========================================================================== -->
     <header id="main-header">
+        <div class="scroll-progress-bar" id="scroll-progress"></div>
         <div class="container">
             <a href="#" class="logo" id="header-logo" aria-label="Parth Engineering Home">
                 <img src="assets/logo.png" alt="Parth Engineering Logo">
@@ -79,9 +80,11 @@
              Hero Section
              ========================================================================== -->
         <section id="hero" class="hero">
+            <div class="blur-orb" style="top: 15%; left: 10%;"></div>
+            <div class="blur-orb" style="top: 30%; right: 10%; background: radial-gradient(circle, rgba(var(--accent-secondary-rgb), 0.08) 0%, transparent 70%);"></div>
             <div class="container">
                 <div class="hero-grid">
-                    <div class="hero-text-content">
+                    <div class="hero-text-content reveal">
                         <div class="hero-tag">
                             <span class="badge">INDUSTRIAL PROCESS APPLIANCES</span>
                         </div>
@@ -106,7 +109,7 @@
                         </div>
                     </div>
                     
-                    <div class="hero-image-wrapper">
+                    <div class="hero-image-wrapper reveal">
                         <div class="hero-image-glow"></div>
                         <img src="assets/image_b9ad94 (1).png" alt="Parth Heavy-Duty Finned Tube Radiator" class="hero-image" id="hero-interactive-img">
                     </div>
@@ -120,19 +123,19 @@
         <section id="metrics" class="metrics">
             <div class="container">
                 <div class="metrics-grid">
-                    <div class="metric-card">
+                    <div class="metric-card reveal">
                         <div class="metric-number">100%</div>
                         <div class="metric-label">Custom Thermal Designs</div>
                     </div>
-                    <div class="metric-card">
+                    <div class="metric-card reveal">
                         <div class="metric-number">1.5x</div>
                         <div class="metric-label">Hydrostatic Pressure Testing</div>
                     </div>
-                    <div class="metric-card">
+                    <div class="metric-card reveal">
                         <div class="metric-number">ASME</div>
                         <div class="metric-label">Section VIII Standard Code</div>
                     </div>
-                    <div class="metric-card">
+                    <div class="metric-card reveal">
                         <div class="metric-number">24/7</div>
                         <div class="metric-label">Heavy-Duty Run Capacities</div>
                     </div>
@@ -144,15 +147,16 @@
         <!-- ==========================================================================
              Catalog (Products Listing)
              ========================================================================== -->
-        <section id="catalog" class="catalog">
+        <section id="catalog" class="catalog" style="position: relative;">
+            <div class="blur-orb" style="bottom: 10%; right: 5%; background: radial-gradient(circle, rgba(var(--accent-primary-rgb), 0.06) 0%, transparent 70%);"></div>
             <div class="container">
-                <div class="section-header">
+                <div class="section-header reveal">
                     <span class="badge">ENGINEERING SOLUTIONS</span>
                     <h2>Product Catalogue</h2>
                     <p>Every industrial appliance is designed to ASME/TEMA guidelines, utilizing premium metals, precision welds, and thorough stress-tests to ensure maximum plant lifecycle efficiency.</p>
                 </div>
                 
-                <div class="catalog-controls">
+                <div class="catalog-controls reveal">
                     <!-- Dynamic Search Bar -->
                     <div class="search-wrapper glass">
                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
@@ -178,7 +182,7 @@
                 </div>
                 
                 <!-- Catalog Grid -->
-                <div class="product-grid" id="product-grid">
+                <div class="product-grid reveal" id="product-grid">
                     <!-- Injected dynamically by app.js -->
                 </div>
             </div>
@@ -191,13 +195,13 @@
              ========================================================================== -->
         <section id="brochure" class="brochure-section">
             <div class="container">
-                <div class="section-header">
+                <div class="section-header reveal">
                     <span class="badge">PRODUCT BROCHURE</span>
                     <h2>Parth Official Product Brochure</h2>
                     <p>Get a comprehensive overview of our heavy thermal engineering design wheel, shop floor fabrication capabilities, and complete 16-product specifications catalog in a print-ready A4 PDF.</p>
                 </div>
                 
-                <div class="brochure-preview-card glass">
+                <div class="brochure-preview-card glass reveal">
                     <div class="brochure-mockup-grid">
                         <div class="brochure-mockup-page page-1 glass">
                             <div class="mock-hdr">
@@ -272,11 +276,12 @@
         <!-- ==========================================================================
              About Company Section
              ========================================================================== -->
-        <section id="about" class="about">
+        <section id="about" class="about" style="position: relative;">
+            <div class="blur-orb" style="top: 20%; left: -10%; background: radial-gradient(circle, rgba(var(--accent-secondary-rgb), 0.06) 0%, transparent 70%);"></div>
             <div class="container">
                 <!-- Row 1: Narrative Story + Real Workshop Image Gallery -->
                 <div class="about-grid">
-                    <div class="about-story">
+                    <div class="about-story reveal">
                         <span class="badge">COMPANY PROFILE</span>
                         <h2>Engineered for Extreme Industrial Performance</h2>
                         
@@ -297,7 +302,7 @@
                     </div>
                     
                     <!-- Staggered Workshop Gallery Container -->
-                    <div class="about-gallery">
+                    <div class="about-gallery reveal">
                         <div class="about-image-glow"></div>
                         
                         <div class="gallery-column">
@@ -317,62 +322,62 @@
                 </div>
                 
                 <!-- Row 3: Official Product Range & Applications Grid -->
-                <div class="about-range-header">
+                <div class="about-range-header reveal">
                     <span class="badge">OFFICIAL APPLICATIONS</span>
                     <h2>Industrial Product Coverage</h2>
                     <p>Precision-engineered heat transfer and processing equipment built for specific industrial operations and heavy plant applications.</p>
                 </div>
                 <div class="about-range-grid">
-                    <div class="range-card glass">
+                    <div class="range-card glass reveal">
                         <div class="range-card-icon">🌀</div>
                         <div class="range-card-content">
                             <h3>Oil Coolers / Heat Exchangers</h3>
                             <span class="range-application">For Turbines and Transformers</span>
                         </div>
                     </div>
-                    <div class="range-card glass">
+                    <div class="range-card glass reveal">
                         <div class="range-card-icon">💨</div>
                         <div class="range-card-content">
                             <h3>Inter / After Coolers</h3>
                             <span class="range-application">For Air Compressors</span>
                         </div>
                     </div>
-                    <div class="range-card glass">
+                    <div class="range-card glass reveal">
                         <div class="range-card-icon">☀️</div>
                         <div class="range-card-content">
                             <h3>Air Coolers / Radiators</h3>
                             <span class="range-application">For Alternators, DG Sets, & HT Motors</span>
                         </div>
                     </div>
-                    <div class="range-card glass">
+                    <div class="range-card glass reveal">
                         <div class="range-card-icon">❄️</div>
                         <div class="range-card-content">
                             <h3>Condensers & Chillers</h3>
                             <span class="range-application">For Chemical & Distillery Industries</span>
                         </div>
                     </div>
-                    <div class="range-card glass">
+                    <div class="range-card glass reveal">
                         <div class="range-card-icon">🍃</div>
                         <div class="range-card-content">
                             <h3>Hot & Cold Air Blowers</h3>
                             <span class="range-application">For Sugar Hoppers</span>
                         </div>
                     </div>
-                    <div class="range-card glass">
+                    <div class="range-card glass reveal">
                         <div class="range-card-icon">🔥</div>
                         <div class="range-card-content">
                             <h3>Super Heaters</h3>
                             <span class="range-application">For Centrifugal Machines</span>
                         </div>
                     </div>
-                    <div class="range-card glass">
+                    <div class="range-card glass reveal">
                         <div class="range-card-icon">⚡</div>
                         <div class="range-card-content">
                             <h3>Transient Heaters</h3>
                             <span class="range-application">For Centrifugal Machines</span>
                         </div>
                     </div>
-                    <div class="range-card glass">
+                    <div class="range-card glass reveal">
                         <div class="range-card-icon">🛡️</div>
                         <div class="range-card-content">
                             <h3>Process Vessels</h3>
@@ -385,7 +390,7 @@
             <!-- Client Logos Sub-section inside About Us -->
             <div class="about-clients" id="about-clients">
                 <div class="container">
-                    <div class="about-clients-header">
+                    <div class="about-clients-header reveal">
                         <span class="badge">TRUSTED PARTNERS</span>
                         <h3>Supplying to Indian Defense &amp; Heavy Industries</h3>
                         <p>Parth Engineering is an approved vendor supplying heavy-duty thermal systems and pressure vessels to Indian Defense units, national enterprises, and leading private manufacturers. Every build is certified for absolute reliability under demanding industrial runtimes.</p>
@@ -393,7 +398,7 @@
                 </div>
 
                 <!-- Horizontal Marquee Container -->
-                <div class="horizontal-marquee-panel glass">
+                <div class="horizontal-marquee-panel glass reveal">
                     <div class="horizontal-marquee-wrapper">
                         <div class="horizontal-marquee-track">
                             <!-- Set of 5 Logos -->
@@ -440,14 +445,14 @@
              ========================================================================== -->
         <section id="contact" class="contact">
             <div class="container">
-                <div class="contact-header">
+                <div class="contact-header reveal">
                     <span class="badge">GET IN TOUCH</span>
                     <p>Partner with us for reliable, high-performance thermal engineering solutions tailored to your industry's needs.</p>
                 </div>
 
                 <div class="contact-details-grid">
                     <!-- Card 1: Registered Office -->
-                    <div class="contact-detail-card glass">
+                    <div class="contact-detail-card glass reveal">
                         <div class="contact-detail-icon">
                             <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                                 <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z" stroke-linecap="round" stroke-linejoin="round"/>
@@ -461,7 +466,7 @@
                     </div>
 
                     <!-- Card 2: Manufacturing Works -->
-                    <div class="contact-detail-card glass">
+                    <div class="contact-detail-card glass reveal">
                         <div class="contact-detail-icon">
                             <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                                 <rect x="2" y="7" width="20" height="13" rx="2" ry="2" stroke-linecap="round" stroke-linejoin="round"/>
@@ -475,7 +480,7 @@
                     </div>
 
                     <!-- Card 3: Phone / Mobile -->
-                    <div class="contact-detail-card glass">
+                    <div class="contact-detail-card glass reveal">
                         <div class="contact-detail-icon">
                             <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                                 <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z" stroke-linecap="round" stroke-linejoin="round"/>
@@ -488,7 +493,7 @@
                     </div>
 
                     <!-- Card 4: Email Inquiry -->
-                    <div class="contact-detail-card glass">
+                    <div class="contact-detail-card glass reveal">
                         <div class="contact-detail-icon">
                             <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                                 <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" stroke-linecap="round" stroke-linejoin="round"/>
@@ -825,6 +830,13 @@
             </div>
         </div>
     </div>
+
+    <!-- Floating Back-to-Top Button -->
+    <button class="scroll-to-top glass" id="scroll-to-top" aria-label="Scroll to top" title="Scroll to Top">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+            <polyline points="18 15 12 9 6 15"></polyline>
+        </svg>
+    </button>
 
     <!-- Core Logic Injection -->
     <script src="app.js"></script>
